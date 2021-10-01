@@ -1,0 +1,270 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - contact_us
+  - out_of_scope:
+      is_retrieval_intent: true
+  - inform_contact_details
+  - services:
+      is_retrieval_intent: true
+  - products:
+      is_retrieval_intent: true
+  - inform_name
+  - get_services_list
+  - thankyou
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - get_products_list
+entities:
+  - email_id
+  - language
+  - name
+slots:
+  name:
+    type: text
+    influence_conversation: true
+  contact_details:
+    type: text
+    influence_conversation: true
+  subject:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet1:
+  - text: 👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+  utter_greet2:
+  - buttons:
+    - payload: Get Product details
+      title: Products
+    - payload: Services you offer
+      title: Services
+    - payload: Contact you
+      title: Contact Us
+    text: 'Let me know if you have any questions regarding us or Select a topic below:'
+  utter_goodbye:
+  - text: Bye 👋🏻👋🏻👋🏻
+  utter_welcome:
+  - text: You are very welcome!😇
+  - text: That's my pleasure!😇
+  - text: Anytime. That's what I'm here for.😇
+  - text: It's my pleasure to help.😇
+  utter_out_of_scope/non_english:
+  - text: I only understand English, I'm sorry.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
+  utter_start_over:
+  - text: Let's start over. How can I help you?
+  utter_services_list:
+  - buttons:
+    - payload: website design
+      title: Website Design
+    - payload: bespoke development
+      title: Bespoke Web Development
+    - payload: ecommerce solution services
+      title: Ecommerce Solution
+    - payload: mobile app development
+      title: Mobile App Development
+    - payload: digital merketing
+      title: Digital Marketing
+    - payload: open source customization
+      title: Open Source Customization
+    - payload: corporate branding
+      title: Corporate Branding
+    text: Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+  utter_services/website_design:
+  - text: |
+      Website Design Services- At TechExcel our priority is to streamline your website by giving it a dynamic makeover to create a unique brand image. 
+      Be it font, typography, color, or image we make sure each and everything is no less than perfect. So, why settle on the cheap templates yielding you nothing? 
+      From Photoshop to HTML,...[Read More](https://www.techexcel.eu/website-design-development.html)
+  utter_services/bespoke_web_development:
+  - text: |
+      Bespoke Web Development Services- You may be looking out to build a simple static website that features your business profile and details. Or, your objective may be to get a dynamic website that includes multiple applications like ERP, CMS, and CRM. 
+      Irrespective of if you found your purpose, at TechExcel you’ll find just what your web presence needs. 
+      With a strong frontend,...[Read More](https://www.techexcel.eu/bespoke-web-development.html)
+  utter_services/ecommerce_solution:
+  - buttons:
+    - payload: TechTake
+      title: TechTake
+    text: |
+      Ecommerce Solution Services- Whether massive Retail Chain or a small Mom & Pop store, no one can deny the fact that the future belongs to E-commerce. 
+      Before anyone overtakes you in this cut throat competition, seize the lion’s share by getting your own E-commerce website with us...[Read More](https://www.techexcel.eu/ecommerce-solution.html)
+      Also take a look at our product, TechTake- A complete Ecommerce solution using Mobile App and website for retail businesses.
+  utter_services/mobile_app_development:
+  - buttons:
+    - payload: TechTake
+      title: TechTake
+    text: |
+      Mobile App Development Services- With increase in the number of smartphones users and apps on their smartphones, we’ve got the passion to develop the app for you right here at TechExcel. 
+      We master both- the native mobile apps created for just Play Store or App Store, and the hybrid apps that can run on iOS and Android devices alike. 
+      TechExcel can help you make...[Read More](https://www.techexcel.eu/mobile-app-development.html)
+      Also take a look at our product, TechTake- A complete Ecommerce solution using Mobile App and website for retail businesses.
+  utter_services/digital_marketing:
+  - buttons:
+    - payload: TechSearch
+      title: TechSearch
+    - payload: TechReco
+      title: TechReco
+    - payload: TechChat
+      title: TechChat
+    - payload: Sentiman
+      title: Sentiman
+    - payload: TechJilt
+      title: TechJilt
+    - payload: TechSMS
+      title: TechSMS
+    text: |
+      Digital Marketing Services- Digitalization is here to stay. Enterprises have no choice but to pace up with technological advancement by marking their presence online too. 
+      Connecting with your audience in the right place and at the right time is the mainstay of successful Marketing. 
+      TechExcel helps you identify the clear picture of how each digital marketing campaign would support your company's...[Read More](https://www.techexcel.eu/digital-marketing.html)
+      Also take a look at products we offer-
+  utter_services/open_source_customization:
+  - text: |
+      Open Source Customization Services- With the Open Source Customization mantra, the Content Management System or scripts such as Joomla, WordPress, Magento, Prestashop, Shopify, and so on a software, app, or website can be personalized to one’s specific need and wish. 
+      Developers at TechExcel are...[Read More](https://www.techexcel.eu/open-source-customization.html)
+  utter_services/corporate_branding:
+  - text: |
+      Corporate Branding Services- A well-established brand can add to your business’ value and growth. It helps you in generating and maintaining a loyal customer base. 
+      TechExcel offers you a range of services in the arena of Branding and Graphics Designing like Logo Designing, Visiting Card etc...[Read More](https://www.techexcel.eu/corporate-branding.html)
+  utter_products_list:
+  - buttons:
+    - payload: sales products list
+      title: Sales
+    - payload: marketing products list
+      title: Digital Marketing
+    - payload: staff management products list
+      title: Staff Management
+    - payload: finance products list
+      title: Finance
+    - payload: medical products list
+      title: Medical
+    text: Here are the domains for which we offer our products, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+  utter_products/sales_list:
+  - buttons:
+    - payload: TechSales
+      title: TechSales
+    - payload: TechSearch
+      title: TechSearch
+    - payload: TechFace
+      title: TechFace
+    - payload: TechTake
+      title: TechTake
+    - payload: TechImage
+      title: TechImage
+    - payload: TechNav
+      title: TechNav
+    text: Want to boost your Sales? Take a look at our products-
+  utter_products/sales_TechSales:
+  - text: TechSales- Sales forecast, unexpected market predictions using ML [Read More](https://www.techexcel.eu/sales.html)
+  utter_products/sales_TechSearch:
+  - text: TechSearch- Product search optimization with multilingual correction with increased relevance [Read More](https://www.techexcel.eu/techsearch.html)
+  utter_products/sales_TechFace:
+  - text: TechFace- AI based marketing solution using face detection [Read More](https://www.techexcel.eu/sales.html)
+  utter_products/sales_TechTake:
+  - text: TechTake- A complete Ecommerce solution using Mobile App and website for retail businesses [Read More](https://www.techexcel.eu/sales.html)
+  utter_products/sales_TechImage:
+  - text: TechImage- AR based object virtualisation tool [Read More](https://www.techexcel.eu/sales.html)
+  utter_products/sales_TechNav:
+  - text: TechNav- A highly customizable delivery management solution [Read More](https://www.techexcel.eu/sales.html)
+  utter_products/digital_marketing_list:
+  - buttons:
+    - payload: TechReco
+      title: TechReco
+    - payload: TechChat
+      title: TechChat
+    - payload: Sentiman
+      title: Sentiman
+    - payload: TechJilt
+      title: TechJilt
+    - payload: TechSMS
+      title: TechSMS
+    text: Modern marketers are expected to be a million places at once. We are here to make you assure about it. For Digital Marketing we offer-
+  utter_products/digital_marketing_TechReco:
+  - text: TechReco- Product Recommendation system based on user profiles using ML [Read More](https://www.techexcel.eu/digitalmarketing.html)
+  utter_products/digital_marketing_TechChat:
+  - text: TechChat- AI based chatbot used on website, mobile app, SMM platforms [Read More](https://www.techexcel.eu/techchat.html)
+  utter_products/digital_marketing_Sentiman:
+  - text: Sentiman- Pre and post marketing analysis of products using ML [Read More](https://www.techexcel.eu/digitalmarketing.html)
+  utter_products/digital_marketing_TechJilt:
+  - text: TechJilt- CRM like marketing tool used with ecommerce website/mobile app [Read More](https://www.techexcel.eu/techjilt.html)
+  utter_products/digital_marketing_TechSMS:
+  - text: TechSMS- Easy and intuitive SMS marketing tool [Read More](https://www.techexcel.eu/techsms.html)
+  utter_products/staff_management_list:
+  - buttons:
+    - payload: TechTime
+      title: TechTime
+    - payload: TechStaff
+      title: TechStaff
+    - payload: TechContact
+      title: TechContact
+    text: Employee Management Systems are very useful to ensure a smooth running of your organization. We are here to offer you-
+  utter_products/staff_management_TechTime:
+  - text: TechTime- Attendance System [Read More](https://www.techexcel.eu/staff-management.html)
+  utter_products/staff_management_TechStaff:
+  - text: TechStaff- Staff Requirement Prediction [Read More](https://www.techexcel.eu/staff-management.html)
+  utter_products/staff_management_TechContact:
+  - text: TechContact- Contact Sharing and Management System [Read More](https://www.techexcel.eu/staff-management.html)
+  utter_products/finance_list:
+  - buttons:
+    - payload: FinRisk
+      title: FinRisk
+    text: Want to make better financial decisions? We are here to help you with, not only track your financial performace, but to detect fraud, and provide financial advisory and everything. Take a look at the product we offer-
+  utter_products/finance_FinRisk:
+  - text: FinRisk- ML based financial risk analysis tool [Read More](https://www.techexcel.eu/finance.html)
+  utter_products/medical_list:
+  - buttons:
+    - payload: TechMed
+      title: TechMed
+    text: We know managing an entire hospital can be very overwhelming. We are here with a frictionless solution for you, for managing patients, doctors, inventory, appointments, billing information, finances and much more.
+  utter_products/medical_TechMed:
+  - text: TechMed- A complete hospital management system [Read More](https://www.techexcel.eu/medical.html)
+  utter_contact_us:
+  - text: Alright! Let's get started!😊
+  utter_ask_name:
+  - text: First of all, I would like to know your name.
+  utter_ask_contact_details:
+  - text: Can you please provide your contact info? Mobile Number(prefered)/Email Address
+  utter_ask_subject:
+  - text: Please provide the subject for your email.
+  utter_if_deny:
+  - text: We need to know your details to reach you back.
+actions:
+- action_contact_confirm
+- action_save_conversation
+- utter_ask_contact_details
+- utter_ask_name
+- utter_contact_us
+- utter_goodbye
+- utter_greet1
+- utter_greet2
+- utter_if_deny
+- utter_ask_subject
+- utter_out_of_scope
+- utter_products
+- utter_products_list
+- utter_services
+- utter_services_list
+- utter_start_over
+- utter_welcome
+forms:
+  contact_form:
+    required_slots:
+      name:
+      - entity: name
+        type: from_entity
+      - intent:
+        - inform_name
+        type: from_text
+      contact_details:
+      - entity: email_id
+        type: from_entity
+      - intent:
+        - inform_contact_details
+        type: from_text
+      subject:
+      - type: from_text

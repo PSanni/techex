@@ -1,0 +1,65 @@
+version: "2.0"
+nlu:
+- intent: out_of_scope/non_english
+  examples: |
+    - Wie fange ich mit Rasa an?
+    - hilf mir beim start
+    - tschüssikowski
+    - ¿Qué pasa?
+    - ça va ?
+    - como te llamas
+    - wer bist Du?
+    - como inicio en rasa
+    - come stai?
+    - como estas
+    - de donde eres
+    - de que lugar eres?
+    - epdi iruka
+    - eres humana
+    - do you speak [LAHNDA](language)
+    - do you understand [JAVANESE](language)
+    - i know [GERMAN](language)
+    - i speak [KOREAN](language)
+    - i know [FRENCH](language) 
+    - do you understand [TELUGU](language)
+    - kalhmera sara ti kaneis
+    - kannst du auch deutsch?
+    - kannst du dies auch auf deutsch?
+    - oui je besoine de l'aide
+    - que puedes hacer?
+    - tu parles francais?
+    - tudo bom
+    - tu pagal
+    - kannst du mir helfen
+    - tu kaisi he
+    - こにちは
+    - 日本語分かる？
+    - chào
+    - 你好
+    - I'm speaking a non-english language.
+    - 呵呵
+    - 我该如何使用
+    - 你懂中文吗？
+    - 您好
+    - 你叫什么名字
+    - 你是谁
+    - 中文
+    - kya hindi me bat kar sakate ho
+    - Dumme sara
+    - αστεία λές
+    - rasa codigo abierto
+    - 卧槽
+    - [german](language)?
+    - can you talk in [hindi](language)
+    - do you know [hindi](language)
+    - can you understand [CHINESE](language)
+    - do you know [SPANISH](language)
+    - can you speak [MANDARIN](language)
+    - do you understand [ARABIC](language) 
+    - i understand [PORTUGUESE](language) 
+    - do you speak [BENGALI](language)
+    - do you understand [RUSSIAN](language)
+    - can you speak [JAPANESE](language)
+    - do you speak [MARATHI](language)
+    - can you speak [TURKISH](language)
+    - can i speak in [TAMIL](language)

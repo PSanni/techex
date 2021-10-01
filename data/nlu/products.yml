@@ -1,0 +1,176 @@
+version: "2.0"
+nlu:
+- intent: products/sales_list
+  examples: |
+    - sales products list
+    - sales product
+    - products for sales
+    - do you offer any products for sales
+    - sales products
+    - i need to increase my sales
+    - how do i increase my sales
+    - i want to increase my sales
+    - i want to boost my sales
+    - want to increase sales
+- intent: products/digital_marketing_list
+  examples: |
+    - marketing products list
+    - marketing product
+    - products for marketing
+    - marketing solutions products
+    - i am looking for digital marketing tools
+- intent: products/staff_management_list
+  examples: |
+    - staff management products list
+    - staff management products
+    - staff management
+    - do you have anything for staff management ?
+- intent: products/finance_list
+  examples: |
+    - finance products list
+    - finance products
+    - tools in finance
+    - products related to finance
+    - financial tools
+    - i need financial tools
+- intent: products/medical_list
+  examples: |
+    - medical proudcts list
+    - medical products
+    - medical related products list
+    - medical tech products
+    - products in medical field
+    - tool in medical field
+- intent: products/sales_TechSales
+  examples: |
+    - TechSales
+    - Sales forecast, unexpected market predictions using ML
+    - sales forecasting using machine learning
+    - revenue predictions
+- intent: products/sales_TechSearch
+  examples: |
+    - TechSearch
+    - Product search optimization with multilingual correction with increased relevance
+    - multilingual search optimization
+    - I am looking for search optimisations product
+    - i am interested in search optimization
+- intent: products/sales_TechFace
+  examples: |
+    - TechFace
+    - AI based marketing solution using face detection
+    - face detection
+    - computer vision
+    - machine vision
+    - detect and analyze faces
+    - accurately confirm person's identity
+    - face recognition software
+    - biometric surveillance
+- intent: products/sales_TechTake
+  examples: |
+    - TechTake
+    - A complete Ecommerce solution product using Mobile App and website for retail businesses
+    - Building an eCommerce product
+    - Do you have e-commerce products?
+- intent: products/sales_TechImage
+  examples: |
+    - TechImage
+    - AR based object virtualisation tool
+    - augmnted reality
+    - object virtualisation tool
+    - to identify the form and shape of different objects and their position in space
+    - to apply augmented reality and object recognition technology
+- intent: products/sales_TechNav
+  examples: |
+    - TechNav
+    - A highly customizable delivery management solution
+    - Improve Delivery Service With Optimized Routes & Real-Time Tracking
+    - to dispatch, track and manage delivery orders easily
+    - a platform that digitalizes core logistics operations like dispatching, task allocation, vehicle tracking, route planning
+- intent: products/digital_marketing_TechReco
+  examples: |
+    - TechReco
+    - Product Recommendation system based on user profiles using ML
+    - recommendation system using machine learning
+    - information filtering system that seeks to predict the "rating" or "preference" of a user
+    - finds out the match between user and item and imputes the similarities between users and items for recommendation
+- intent: products/digital_marketing_TechChat
+  examples: |
+    - TechChat
+    - AI based chatbot
+    - conversational AI chatbot
+    - AI chatbot
+    - virtual assistant
+    - interactive chat assistant
+    - bot
+    - chatbot
+- intent: products/digital_marketing_Sentiman
+  examples: |
+    - Sentiman
+    - Pre and post marketing analysis of products using ML
+    - Market analysis
+    - to create smarter customer segmentations, deliver more relevant creative campaigns
+    - to measure marketers performance more effectively
+    - can analyze sales activities and customer data at scale, generate deeper insights
+    - amplify sales success with machine learning
+- intent: products/digital_marketing_TechJilt
+  examples: |
+    - TechJilt
+    - CRM
+    - Customer relationship management tool
+    - to focus on company's relationships with customers, colleagues, suppliers
+    - allow users to track customer and company interactions
+    - keep customer happy and build stronger relations
+    - to find new customers, win their trust, provide qualified support throughout the relationship
+    - to manage customer requests and automate service operations for customer care excellence
+- intent: products/digital_marketing_TechSMS
+  examples: |
+    - TechSMS
+    - Easy and intuitive SMS marketing tool
+    - business text messaging software
+    - to plan and implement marketing campaigns that target mobile devices via SMS (Short Message Service)
+- intent: products/staff_management_TechTime
+  examples: |
+    - TechTime
+    - Attendance System
+    - Time and attendance systems
+    - to track and monitor when employees start and stop work
+    - monitor employees working hours and late arrivals, early departures, time taken on breaks and absenteeism
+- intent: products/staff_management_TechStaff
+  examples: |
+    - TechStaff
+    - Staff Requirement Prediction
+    - predict future labour need
+    - forecasting staff demands
+    - workforce planning prediction
+    - employee requirement prediction
+- intent: products/staff_management_TechContact
+  examples: |
+    - TechContact
+    - Contact Sharing and Management System
+    - record and organize your contacts
+    - save and later find contact information
+    - CM system
+    - CMS
+- intent: products/finance_FinRisk
+  examples: |
+    - FinRisk
+    - ML based financial risk analysis tool
+    - financial risk analysis using machine learning
+    - identify financial risks
+    - measure financial risks
+    - fraud detection
+    - automate trading activities
+    - financial advisory services
+    - credit risk modelling
+    - Loan and Insurance Underwriting
+- intent: products/medical_TechMed
+  examples: |
+    - TechMed
+    - hospital management system
+    - HMS
+    - A complete hospital management system
+    - manage patient information
+    - hospital facility, hospital supply, hospital laboratory, hospital report
+    - for managing patients, doctors, hospital inventory, hospital appointments, hospital billing information
+    - i need complete hospital management system
+    - Do you have products for hospital management?

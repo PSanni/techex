@@ -1,0 +1,139 @@
+version: "2.0"
+nlu:
+- intent: get_products_list
+  examples: |
+    - what are your products?
+    - products details
+    - products you offer
+    - products offered by you
+    - products list
+    - products
+    - get product details
+    - Get Product details
+    - what are your productts
+- intent: get_services_list
+  examples: |
+    - what are your services
+    - what services you offer
+    - services list
+    - services offered by you
+    - services
+    - get service details
+    - get services
+    - Services you offer
+    - what kinds of services do you offer?
+    - what else
+    - what kind of services do you offer?
+    - i am looking for digital marketing services
+    - what kind of services do you offer
+    - What kind of service do you offer?
+    - what kind services do you offer
+- intent: contact_us
+  examples: |
+    - contact
+    - let's get connected
+    - how do i reach you?
+    - contact you
+    - call you
+    - call me
+    - customer support
+    - contact support
+    - get in touch
+    - send message
+    - help
+    - let's get in touch
+    - let's connect
+    - i need more details
+    - talk with person
+    - i want to contact your team
+    - talk with customer support team
+    - Contact you
+- intent: inform_name
+  examples: |
+    - [raj](name)
+    - my name is [rohit](name)
+    - it is [sam](name)
+    - call me [james](name)
+    - you can call me [aditya](name)
+    - it's [aryan](name)
+    - i'm [joyal](name)
+    - this is [krupa](name)
+    - i am [khalid](name)
+    - i am [rohan](name)
+    - [viral](name)
+    - [vivek](name)
+    - i am [vivek](name)
+- intent: inform_contact_details
+  examples: |
+    - [example@rasa.com](email_id)
+    - my email is [example@yahoo.com](email_id)
+    - it's [example@gmail.com](email_id)
+    - it's [a@b.com](email_id)
+    - [xyz@hulaloo.ai](email_id)
+    - [asdf@asdf.com](email_id)
+    - [test@test.com](email_id)
+    - it is [fhh5@gmail.com](email_id)
+    - it's [h5651@gmail.com](email_id)
+    - it is [xyz1@gmail.com](email_id)
+    - [vrtck2@gmail.com](email_id)
+    - it is [vvigfk4@gmail.com](email_id)
+    - [viral34@gmail.com](email_id)
+    - it is [vivekprajapatu23232@gmail.com](email_id)
+    - [hp323@gmail.com](email_id)
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - okay
+    - that's good
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: thankyou
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - thnks
+    - thx
+    - thanks for your information
+    - you helped a lot thank you
+    - appreciate your help
+    - that's awesome

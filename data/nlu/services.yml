@@ -1,0 +1,68 @@
+version: "2.0"
+nlu:
+- intent: services/website_design
+  examples: |
+    - website design
+    - static website
+    - dynamic website
+    - website
+    - back end
+- intent: services/bespoke_web_development
+  examples: |
+    - bespoke development
+    - front end
+    - web development
+    - interactive and user-friendly web development
+- intent: services/ecommerce_solution
+  examples: |
+    - ecommerce solution
+    - ecomm
+    - e-commerce service
+    - ecommerce features
+    - ecommerce
+    - E-commerce services
+- intent: services/mobile_app_development
+  examples: |
+    - mobile app development
+    - native mobile app development
+    - play store app
+    - App Store
+    - hybrid apps
+    - iOS and Android apps
+    - apps
+- intent: services/digital_marketing
+  examples: |
+    - digital merketing
+    - SEO
+    - content marketing
+    - social media marketing
+    - pay per click
+    - Google Ads
+    - PPC campaigns
+    - affiliate marketing
+    - native advertising
+    - marketing automation
+    - email marketing
+    - online pr
+    - inbound marketing
+    - can you tell more about digital marketing
+    - tell me more about digital marketing
+    - tell about digital marketing
+    - tell me about digital marketing
+    - I need digital marketing services
+- intent: services/open_source_customization
+  examples: |
+    - open source customization
+    - customization
+    - magneto
+    - prestashop
+    - shopify
+    - wordpress
+    - joomla
+- intent: services/corporate_branding
+  examples: |
+    - corporate branding
+    - logo designing
+    - visiting cards
+    - leaflets
+    - merchandising

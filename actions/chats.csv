@@ -1,0 +1,5 @@
+intent,user_input,entity_name,entity_value,action,bot_reply
+contact_us,let's get connected,,,utter_ask_name,First of all, I would like to know your name.
+inform_name,i am rohit,name,rohit,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,rohit34@gmail.com,email_id,rohit34@gmail.com,utter_ask_subject,Please provide the subject for your email.
+products,rasa chatbot,,,

@@ -1,0 +1,49 @@
+version: "2.0"
+
+rules:
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet1
+  - action: utter_greet2
+
+- rule: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_welcome
+
+- rule: services
+  steps:
+  - intent: services
+  - action: utter_services
+
+- rule: products
+  steps:
+  - intent: products
+  - action: utter_products
+
+- rule: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: nlu fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: action contact form
+  condition:
+  - active_loop: contact_form
+  steps:
+  - action: contact_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_contact_confirm

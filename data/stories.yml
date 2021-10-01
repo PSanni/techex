@@ -1,0 +1,40 @@
+version: "2.0"
+
+stories:
+
+- story: get products
+  steps:
+  - intent: greet
+  - action: utter_greet1
+  - action: utter_greet2
+  - intent: get_products_list
+  - action: utter_products_list
+
+- story: get services
+  steps:
+  - intent: greet
+  - action: utter_greet1
+  - action: utter_greet2
+  - intent: get_services_list
+  - action: utter_services_list
+
+- story: offer products list
+  steps:
+  - intent: get_products_list
+  - action: utter_products_list
+
+- story: offer services list
+  steps:
+  - intent: get_services_list
+  - action: utter_services_list
+
+- story: contact 
+  steps:
+  - intent: greet
+  - action: utter_greet1
+  - action: utter_greet2
+  - intent: contact_us
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: contact_form
+  - active_loop: contact_form
