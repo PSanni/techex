@@ -2,4 +2,137 @@ intent,user_input,entity_name,entity_value,action,bot_reply
 contact_us,let's get connected,,,utter_ask_name,First of all, I would like to know your name.
 inform_name,i am rohit,name,rohit,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
 inform_contact_details,rohit34@gmail.com,email_id,rohit34@gmail.com,utter_ask_subject,Please provide the subject for your email.
-products,rasa chatbot,,,
+products,rasa chatbot,,,greet,hi,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+get_products_list,Get Product details,,,utter_products_list,Here are the domains for which we offer our products, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+products,staff management products list,,,utter_products/staff_management_list,Employee Management Systems are very useful to ensure a smooth running of your organization. We are here to offer you-
+products,TechContact,,,utter_products/staff_management_TechContact,TechContact- Contact Sharing and Management System [Read More](https://www.techexcel.eu/staff-management.html)
+contact_us,let's get in  touch,,,utter_ask_name,First of all, I would like to know your name.
+inform_name,I am Vivek,name,Vivek,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,vivekp32@gmail.com,email_id,vivekp32@gmail.com,utter_ask_subject,Please provide the subject for your email.
+affirm,okay,,,restart,/restart,,,greet,hi,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+products,i want to service regarding financial risk analysis,,,utter_products/finance_FinRisk,FinRisk- ML based financial risk analysis tool [Read More](https://www.techexcel.eu/finance.html)
+services,do you have service regarding website design,,,utter_services/website_design,Website Design Services- At TechExcel our priority is to streamline your website by giving it a dynamic makeover to create a unique brand image. 
+Be it font, typography, color, or image we make sure each and everything is no less than perfect. So, why settle on the cheap templates yielding you nothing? 
+From Photoshop to HTML,...[Read More](https://www.techexcel.eu/website-design-development.html)
+
+contact_us,let's get in touch,,,utter_ask_name,First of all, I would like to know your name.
+inform_name,i am aryan,name,aryan,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,eryan43@gmail.com,email_id,eryan43@gmail.com,utter_ask_subject,Please provide the subject for your email.
+services,regarding website design service,,,greet,hii,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+products,i want ot build a website,,,utter_services/website_design,Website Design Services- At TechExcel our priority is to streamline your website by giving it a dynamic makeover to create a unique brand image. 
+Be it font, typography, color, or image we make sure each and everything is no less than perfect. So, why settle on the cheap templates yielding you nothing? 
+From Photoshop to HTML,...[Read More](https://www.techexcel.eu/website-design-development.html)
+
+thankyou,thanks,,,utter_welcome,It's my pleasure to help.😇
+contact_us,let's get connected,,,utter_ask_name,First of all, I would like to know your name.
+inform_name,i am vivek,name,vivek,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,vivekpraj232@gmail.com,email_id,vivekpraj232@gmail.com,utter_ask_subject,Please provide the subject for your email.
+services,discuss about website,,,greet,hello,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+products,i want to build a chatbot,,,utter_products/digital_marketing_TechChat,TechChat- AI based chatbot used on website, mobile app, SMM platforms [Read More](https://www.techexcel.eu/techchat.html)
+thankyou,thanks,,,utter_welcome,You are very welcome!😇
+get_services_list,what services do you offer?,,,utter_services_list,Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+services,corporate branding,,,utter_services/corporate_branding,Corporate Branding Services- A well-established brand can add to your business’ value and growth. It helps you in generating and maintaining a loyal customer base. 
+TechExcel offers you a range of services in the arena of Branding and Graphics Designing like Logo Designing, Visiting Card etc...[Read More](https://www.techexcel.eu/corporate-branding.html)
+
+contact_us,let's get connected,,,utter_ask_name,First of all, I would like to know your name.
+inform_name,i am Raj,name,Raj,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,it is rajrajput@gmail.com,email_id,rajrajput@gmail.com,utter_ask_subject,Please provide the subject for your email.
+products,discuss regarding project,,,greet,good morning,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+get_services_list,Services you offer,,,utter_services_list,Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+services,corporate branding,,,utter_services/corporate_branding,Corporate Branding Services- A well-established brand can add to your business’ value and growth. It helps you in generating and maintaining a loyal customer base. 
+TechExcel offers you a range of services in the arena of Branding and Graphics Designing like Logo Designing, Visiting Card etc...[Read More](https://www.techexcel.eu/corporate-branding.html)
+
+services,do you have website development,,,utter_services/bespoke_web_development,Bespoke Web Development Services- You may be looking out to build a simple static website that features your business profile and details. Or, your objective may be to get a dynamic website that includes multiple applications like ERP, CMS, and CRM. 
+Irrespective of if you found your purpose, at TechExcel you’ll find just what your web presence needs. 
+With a strong frontend,...[Read More](https://www.techexcel.eu/bespoke-web-development.html)
+
+contact_us,let's get connected,,,utter_ask_name,First of all, I would like to know your name.
+inform_name,this is rahul,name,rahul,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,it is rahul32@gmail.comm,email_id,rahul32@gmail.comm,utter_ask_subject,Please provide the subject for your email.
+products,discuss regarding project,,,greet,good morning,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+greet,hi,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+get_services_list,Services you offer,,,utter_services_list,Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+services,ecommerce solution services,,,utter_services/ecommerce_solution,Ecommerce Solution Services- Whether massive Retail Chain or a small Mom & Pop store, no one can deny the fact that the future belongs to E-commerce. 
+Before anyone overtakes you in this cut throat competition, seize the lion’s share by getting your own E-commerce website with us...[Read More](https://www.techexcel.eu/ecommerce-solution.html)
+Also take a look at our product, TechTake- A complete Ecommerce solution using Mobile App and website for retail businesses.
+
+products,TechTake,,,utter_products/sales_TechTake,TechTake- A complete Ecommerce solution using Mobile App and website for retail businesses [Read More](https://www.techexcel.eu/sales.html)
+contact_us,let's get connected,,,greet,hi,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+get_services_list,Services you offer,,,utter_services_list,Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+services,corporate branding,,,utter_services/corporate_branding,Corporate Branding Services- A well-established brand can add to your business’ value and growth. It helps you in generating and maintaining a loyal customer base. 
+TechExcel offers you a range of services in the arena of Branding and Graphics Designing like Logo Designing, Visiting Card etc...[Read More](https://www.techexcel.eu/corporate-branding.html)
+
+contact_us,let's get connected,,,utter_ask_name,First of all, I would like to know your name.
+inform_name,i am arya,name,arya,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,arya54@gmail.com,email_id,arya54@gmail.com,utter_ask_subject,Please provide the subject for your email.
+products,discuss regarding project idea,,,contact_us,let's get in touch,,,utter_default,Sorry I didn't get that. Can you rephrase?
+contact_us,let get connected,,,utter_default,Sorry I didn't get that. Can you rephrase?
+contact_us,contact,,,utter_default,Sorry I didn't get that. Can you rephrase?
+greet,hi,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+contact_us,Contact you,,,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,this is vivek12121@gmail.com,email_id,vivek12121@gmail.com,utter_ask_name,First of all, I would like to know your name.
+inform_name,Vivek,name,Vivek,utter_ask_subject,Please provide the subject for your email.
+products,talk about chatbot,,,greet,Hi,,,utter_greet1,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+utter_greet2,Let me know if you have any questions regarding us or Select a topic below:
+contact_us,Contact you,,,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,vivek232@gmail.com,email_id,vivek232@gmail.com,utter_ask_name,First of all, I would like to know your name.
+inform_name,Vivek,name,Vivek,utter_ask_subject,Please provide the subject for your email.
+services,discuss regarding android app dev project,,,smalltalk,hi,,,utter_smalltalk/greetings_hello,Hello! 👋🏻 I'm TechBot. I am here to help you nevigate through our site.
+contact_us,Let's get connected,,,utter_ask_name,I would like to know your name.
+inform_name,I am Raj,name,Raj,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,raj34343@gmail.com,email_id,raj34343@gmail.com,utter_ask_subject,Please provide the subject for your email.
+out_of_scope,discuss regarding a project,,,smalltalk,Good Morning,,,utter_smalltalk/greetings_goodmorning,Very Good Morning, I'm TechBot. I am here to help you nevigate through our site.
+smalltalk,HI,,,utter_smalltalk/greetings_hello,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+get_services_list,Services you offer,,,utter_services_list,Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?
+services,ecommerce solution services,,,utter_services/ecommerce_solution,Ecommerce Solution Services- Whether massive Retail Chain or a small Mom & Pop store, no one can deny the fact that the future belongs to E-commerce. 
+Before anyone overtakes you in this cut throat competition, seize the lion’s share by getting your own E-commerce website with us...[Read More](https://www.techexcel.eu/ecommerce-solution.html)
+Also take a look at our product, TechTake- A complete Ecommerce solution using Mobile App and website for retail businesses.
+
+products,TechTake,,,utter_products/sales_TechTake,TechTake- A complete Ecommerce solution using Mobile App and website for retail businesses [Read More](https://www.techexcel.eu/sales.html)
+contact_us,Let get in touch,,,utter_ask_name,I would like to know your name.
+out_of_scope,I am Urvish,,,utter_smalltalk/user_angry,I'm sorry. A quick walk may make you feel better.
+utter_ask_name,I would like to know your name.
+out_of_scope,This is Urvish,,,utter_out_of_scope/other,I can't help you with that, I'm sorry.
+utter_ask_name,I would like to know your name.
+inform_name,This is Urvish speaking,,,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,dfdshfsd@dfdjf.com,email_id,dfdshfsd@dfdjf.com,utter_ask_subject,Please provide the subject for your email.
+out_of_scope,dfldf ; sf  klf,,,smalltalk,hi there',,,utter_smalltalk/greetings_hello,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+smalltalk,Good Morning,,,utter_smalltalk/greetings_goodmorning,Very Good Morning, I'm TechBot. I am here to help you nevigate through our site.
+smalltalk,How are you doing?,,,utter_smalltalk/greetings_how_are_you,Doing great, thanks.
+contact_us,Let's get connected,,,utter_ask_name,I would like to know your name.
+inform_name,I am Vivek Prajapati,name,Vivek,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,dfdfd@dfdf.com,email_id,dfdfd@dfdf.com,utter_ask_subject,Please provide the subject for your email.
+out_of_scope,discuss regarding dfdfdf,,,smalltalk,hi there',,,utter_smalltalk/greetings_hello,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+smalltalk,Good Morning,,,utter_smalltalk/greetings_goodmorning,Very Good Morning, I'm TechBot. I am here to help you nevigate through our site.
+smalltalk,How are you doing?,,,utter_smalltalk/greetings_how_are_you,Doing great, thanks.
+contact_us,Let's get connected,,,utter_ask_name,I would like to know your name.
+inform_name,I am Vivek Prajapati,name,Vivek,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,dfdfd@dfdf.com,email_id,dfdfd@dfdf.com,utter_ask_subject,Please provide the subject for your email.
+out_of_scope,discuss regarding dfdfdf,,,contact_us,let get in touch,,,smalltalk,hi,,,utter_smalltalk/greetings_hello,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+contact_us,Contact you,,,utter_ask_name,I would like to know your name.
+affirm,I am Aditi,name,Aditi,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,sditi@sditi.com,email_id,sditi@sditi.com,utter_ask_subject,Please provide the subject for your email.
+services,discuss ragarding android app,,,smalltalk,hi there',,,utter_smalltalk/greetings_hello,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+smalltalk,Good Morning,,,utter_smalltalk/greetings_goodmorning,Very Good Morning, I'm TechBot. I am here to help you nevigate through our site.
+smalltalk,How are you doing?,,,utter_smalltalk/greetings_how_are_you,Doing great, thanks.
+contact_us,Let's get connected,,,utter_ask_name,I would like to know your name.
+inform_name,I am Vivek Prajapati,name,Vivek,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,dfdfd@dfdf.com,email_id,dfdfd@dfdf.com,utter_ask_subject,Please provide the subject for your email.
+out_of_scope,discuss regarding dfdfdf,,,contact_us,let get in touch,,,smalltalk,hi,,,utter_smalltalk/greetings_hello,👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+contact_us,Contact you,,,utter_ask_name,I would like to know your name.
+affirm,I am Aditi,name,Aditi,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,sditi@sditi.com,email_id,sditi@sditi.com,utter_ask_subject,Please provide the subject for your email.
+services,discuss ragarding android app,,,smalltalk,Good Evening,,,utter_smalltalk/greetings_goodevening,Good Evening. I am here to help you nevigate through our site.
+contact_us,Contact you,,,utter_ask_name,I would like to know your name.
+out_of_scope,This is Asha Gajjar,name,Asha,utter_ask_contact_details,Can you please provide your contact info? Mobile Number(prefered)/Email Address
+inform_contact_details,adfhfd@dgad.com,email_id,adfhfd@dgad.com,utter_ask_subject,Please provide the subject for your email.
+out_of_scope,dflafdf  dfka,,,
