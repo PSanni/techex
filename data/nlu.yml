@@ -11,6 +11,7 @@ nlu:
     - get product details
     - Get Product details
     - what are your productts
+    - product list
 - intent: get_services_list
   examples: |
     - what are your services
@@ -40,7 +41,6 @@ nlu:
     - contact support
     - get in touch
     - send message
-    - help
     - let's get in touch
     - let's connect
     - i need more details
@@ -48,29 +48,51 @@ nlu:
     - i want to contact your team
     - talk with customer support team
     - Contact you
+    - lets connect
+    - lets get in touc
+    - let contact
     - let get connected
+    - I want to talk with your team
+    - let's discuss something
+    - let's have a discussion
+    - can we talk on phone
+    - let's talk
+    - I want to talk to you over phone
+    - I need to talk to you
+    - I want to speak with you
+    - can we talk on in person
+    - can we talk on mobile
 - intent: inform_name
   examples: |
+    - [Harsh](name)
+    - I am [Nehal](name)
+    - I'm [Suhas](name)
+    - This is [Nidhi](name)
     - [raj](name)
-    - my name is [rohit](name)
+    - my name is [Rohit](name) Patel
     - it is [sam](name)
-    - call me [james](name)
+    - call me [james](name) allen
     - you can call me [aditya](name)
-    - it's [aryan](name)
+    - it's [aryan](name) chaudhary
     - i'm [joyal](name)
-    - this is [krupa](name)
+    - [Ayush](name)
+    - this is [krupa](name) patel
     - i am [khalid](name)
     - i am [rohan](name)
     - [viral](name)
-    - [vivek](name)
+    - [Megna](name) prajapati
     - i am [vivek](name)
-    - this is [ajay](name)
+    - this is [Urvish](name)
     - this is [ajay](name) speaking
     - this is [sanni](name) here
     - it's me [aryan](name)
-    - call me [urvish](name)
+    - call me [dhruv](name)
     - you can call me [joy](name)
     - My name is joel but you can call me [joy](name)
+    - my name is (Anil)[name]
+    - [Kunjan](name)
+    - my name is (Hiral)[name] Gajjar
+    - [Aviraj](name) Patel
 - intent: inform_contact_details
   examples: |
     - [example@rasa.com](email_id)
@@ -81,13 +103,38 @@ nlu:
     - [asdf@asdf.com](email_id)
     - [test@test.com](email_id)
     - it is [fhh5@gmail.com](email_id)
-    - it's [h5651@gmail.com](email_id)
+    - it's [h5651@yahoo.com](email_id)
     - it is [xyz1@gmail.com](email_id)
     - [vrtck2@gmail.com](email_id)
-    - it is [vvigfk4@gmail.com](email_id)
+    - it is [vvigfk4@abc.com](email_id)
     - [viral34@gmail.com](email_id)
     - it is [vivekprajapatu23232@gmail.com](email_id)
     - [hp323@gmail.com](email_id)
+    - email add: [vvigfk4@yahoo.com](email_id)
+    - email: [vvigfk4@hotmail.com](email_id)
+    - mail: [vvigfk4@gmail.com](email_id)
+    - email address [vvigfk4@yahoo.com](email_id)
+    - email [vvigfk4@hotmail.com](email_id)
+    - mail [vvigfk4@gmail.com](email_id)
+    - phone [11232341243](mobile_number)
+    - it is [1234567896](mobile_number)
+    - my mobile number is [1234567896](mobile_number)
+    - my phone number is [919995553322](mobile_number)
+    - my cell number is [9090903423](mobile_number)
+    - you can call me on [4323567812](mobile_number) this phone number
+    - mobile [4323567812](mobile_number)
+    - phone [4323567812](mobile_number)
+    - it's [4323567812](mobile_number)
+    - [4323567812](mobile_number)
+    - mobile number: [4323567812](mobile_number)
+    - mobile: [4323567812](mobile_number)
+    - phone: [4323567812](mobile_number)
+    - mobile = [4323567812](mobile_number)
+    - phone = [4323567812](mobile_number)
+    - my mobile is [4323567812](mobile_number)
+    - my phone is [4323567812](mobile_number)
+    - it is [9090542234](mobile_number)
+    - it is [4757472343](mobile_number)
 - intent: affirm
   examples: |
     - Y
@@ -186,8 +233,6 @@ nlu:
     - i am!
     - i want that
     - i will!
-    - it is ok
-    - its okay
     - ja
     - ja cool
     - ja thats great
@@ -530,3 +575,6 @@ nlu:
     - no thank you very much
     - no thanks not right now
     - no forget
+- regex: mobile_number
+  examples: |
+    - \d{10,12}

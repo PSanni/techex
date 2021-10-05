@@ -26,10 +26,51 @@ stories:
   - intent: get_services_list
   - action: utter_services_list
 
-- story: contact 
+- story: contact us 
   steps:
   - intent: contact_us
+  - action: utter_contact_us
   - action: action_deactivate_loop
   - active_loop: null
   - action: contact_form
   - active_loop: contact_form
+
+- story: contact us interactive2
+  steps:
+  - intent: smalltalk
+  - action: utter_smalltalk
+  - intent: contact_us
+  - action: utter_contact_us
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: contact_form
+  - active_loop: contact_form
+  - slot_was_set:
+    - requested_slot: name
+  - action: utter_ask_name
+  - intent: inform_name
+    entities:
+    - name: Kiran
+  - slot_was_set:
+    - name: Kiran
+  - slot_was_set:
+    - requested_slot: contact_details
+  - action: utter_ask_contact_details
+  - intent: inform_contact_details
+    entities:
+    - mobine_number: '9090542234'
+  - slot_was_set:
+    - contact_details: '9090542234'
+  - slot_was_set:
+    - requested_slot: subject
+  - action: utter_ask_subject
+  - slot_was_set:
+    - subject: 'to discuss regarding android app development'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_contact_confirm
+  - intent: smalltalk
+  - action: utter_smalltalk

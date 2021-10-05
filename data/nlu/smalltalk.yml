@@ -179,15 +179,6 @@ nlu:
     - you're incredibly boring
     - you are boring me
     - you are very boring
-- intent: smalltalk/boss
-  examples: |
-    - who is your boss
-    - who do you think is your boss
-    - I should be your boss
-    - who is your master
-    - who is your owner
-    - who is the boss
-    - who do you work for
 - intent: smalltalk/busy
   examples: |
     - are you busy
@@ -277,8 +268,8 @@ nlu:
     - I will fire you
     - you are unemployed from now on
     - I will make you unemployed
-    - I'm about to fire you
-    - I'm firing you
+    - about to fire you
+    - firing you
     - you are dismissed
     - you are of no use
     - you are useless
@@ -522,27 +513,6 @@ nlu:
     - are you sure today
     - are you sure now
     - are you sure tonight
-- intent: smalltalk/talk_to_me
-  examples: |
-    - why aren't you talking to me
-    - do you want to chat with me
-    - will you talk to me
-    - talk to me
-    - are you going to talk to me
-    - are you talking to me
-    - can you chat with me
-    - can you speak with me
-    - can you talk to me
-    - can you talk with me
-    - say
-    - talk
-    - chat with me
-    - just chat with me
-    - speak to me
-    - speak with me
-    - talk with me
-    - why don't you talk to me
-    - you can talk to me
 - intent: smalltalk/there
   examples: |
     - are you there
@@ -563,7 +533,7 @@ nlu:
     - that's bad
     - this is bad
     - not good
-    - I'm afraid it's bad
+    - afraid it's bad
     - no it's bad
     - that was awful
     - bad
@@ -682,7 +652,7 @@ nlu:
     - very nice
     - very then
     - wonderful
-    - I'm glad to hear that
+    - glad to hear that
     - ok good
     - good for you
     - good to know
@@ -773,7 +743,6 @@ nlu:
     - apologise
     - I apologize
     - sorry
-    - I'm sorry
     - my apologies
     - apologies
     - apologies to me
@@ -789,8 +758,7 @@ nlu:
     - very sorry
     - ok sorry
     - I want to say sorry
-    - alright I'm sorry
-    - okay I'm sorry
+    - alright sorry
 - intent: smalltalk/dialog_what_do_you_mean
   examples: |
     - what exactly do you mean
@@ -853,7 +821,6 @@ nlu:
     - woah
 - intent: smalltalk/greetings_bye
   examples: |
-    - okay see you later
     - hope to see you later
     - bye for now
     - till next time
@@ -926,7 +893,7 @@ nlu:
     - good night see you tomorrow
     - alright goodnight
     - good tonight
-    - okay have a good night
+    - have a good night
     - have a good night
 - intent: smalltalk/greetings_hello
   examples: |
@@ -1000,7 +967,6 @@ nlu:
     - hello sweatheart
     - hello sweet boy
     - hello world
-    - hello, my name is [Charles Pfeffer](name)
     - hello?
     - hello]
     - hellooo
@@ -1029,9 +995,6 @@ nlu:
     - hi friend
     - hi friends
     - hi hi
-    - hi i'm [Sandra Hernandez](name)
-    - hi im [Amanda Anderson](name)
-    - hi mrs rasa
     - hi pal!
     - hi 
     - hi there
@@ -1046,7 +1009,6 @@ nlu:
     - hlo
     - hola
     - howdy
-    - i am [Karen Mease](name)
     - long time no see
     - hello
     - hi
@@ -1074,10 +1036,8 @@ nlu:
     - how are you doing
     - how are the things going
     - are you alright
-    - are you okay
     - how are you feeling
     - how are you going
-    - is everything okay
     - how are you today
     - how do you do
     - how do you feel
@@ -1092,7 +1052,7 @@ nlu:
     - hope your day is going well
     - hope you re having a pleasant evening
     - how's life
-    - I'm fine and you
+    - fine and you
     - how is your life
     - how has your day been
     - how is your morning going
@@ -1122,7 +1082,7 @@ nlu:
   examples: |
     - it's nice to see you
     - lovely to see you
-    - I'm glad to see you
+    - glad to see you
     - great to see you
     - it's good to see you
     - glad to see you
@@ -1132,7 +1092,7 @@ nlu:
     - good to see you
     - great to see you again
     - great to see you too
-    - I am glad to see you again
+    - glad to see you again
     - nice to see you again
     - glad to see you too
     - good to see you again
@@ -1181,36 +1141,32 @@ nlu:
     - enraged
     - angry
     - furious
-    - I am angry with you
-    - I am mad at you
+    - angry with you
+    - mad at you
 - intent: smalltalk/user_back
   examples: |
-    - I am back
-    - I'm here again
-    - here I am again
+    - back
+    - here again
     - I got back
     - I came back
     - I have returned
 - intent: smalltalk/user_bored
   examples: |
     - that was boring
-    - I'm bored
     - bored
     - boring
-    - I am getting bored
     - this is boring
     - very boring
     - it bores me
 - intent: smalltalk/user_busy
   examples: |
-    - I'm overloaded
+    - overloaded
     - I have no time
-    - I'm busy
-    - I'm swamped
+    - busy
+    - swamped
     - I got things to do
-    - how busy I am
     - I got work to do
-    - I'm working
+    - working
     - I don't have time for this
 - intent: smalltalk/user_can_not_sleep
   examples: |
@@ -1221,29 +1177,28 @@ nlu:
     - I can't fall asleep
     - I can't get to sleep
     - I can't get no sleep
-    - I'm insomniac
+    - insomniac
 - intent: smalltalk/user_does_not_want_to_talk
   examples: |
     - bad time for talking
     - I don't want to talk
     - let's not talk
-    - I'm not talking to you anymore
+    - not talking to you anymore
     - I don't want to talk to you
     - let's stop talking for a minute
-    - I'm not in the mood for chatting
+    - not in the mood for chatting
 - intent: smalltalk/user_excited
   examples: |
-    - I'm really excited
-    - how excited I am
+    - really excited
+    - how excited
     - thrilled
-    - I'm excited about working with you
-    - I'm excited to start our friendship
+    - excited about working with you
+    - excited to start our friendship
     - perfect
     - great
     - amazing
     - feeling like a king
     - wonderful
-    - I am feeling very good
     - great
     - amazing
     - going to save the world
@@ -1259,42 +1214,35 @@ nlu:
     - is it time for bed yet
     - it's time to go to bed
     - time for us to go to bed
-    - I'm going to bed
-    - I'm a little tired and I want to go to bed
+    - going to bed
+    - a little tired and I want to go to bed
     - it's bed time
     - going to bed now
 - intent: smalltalk/user_good
   examples: |
     - good
-    - I'm doing just great
-    - I'm doing fine
-    - I'm good
-    - I'm doing good
-    - I'm great thanks
+    - doing just great
+    - doing fine
+    - good
+    - doing good
+    - great thanks
 - intent: smalltalk/user_happy
   examples: |
     - happy
-    - I'm happy to see you
+    - happy to see you
     - happy
-    - if you're happy then I'm happy
-    - I'm happy for you
-    - I'm happy to help
-    - I'm happy to see you
+    - if you're happy then I happy
+    - happy for you
+    - happy to help
+    - happy to see you
 - intent: smalltalk/user_has_birthday
   examples: |
     - it is my birthday
-    - I'm celebrating my birthday today
+    - celebrating my birthday today
     - today is my birthday
     - it's my birthday today
     - I was born today
     - it's my b-day
-- intent: smalltalk/user_here
-  examples: |
-    - here
-    - here I am
-    - right here
-    - already here
-    - can you tell if I'm here or not
 - intent: smalltalk/user_joking
   examples: |
     - joking
@@ -1327,7 +1275,6 @@ nlu:
     - yeah I like you
     - you're special
     - yes I like you
-    - okay I like you
     - you are special to me
     - you are very special
     - you are so sweet
@@ -1358,7 +1305,7 @@ nlu:
     - yes you are special
     - I like your smile
     - I like you as you are
-    - I'm starting to like you
+    - starting to like you
     - you're awesome I like you
     - I also like you
     - but I like u
@@ -1372,7 +1319,7 @@ nlu:
     - you're very special to me
     - I like that about you
     - but I like you just the way you are
-    - okay I like you too
+    - I like you too
     - I like you you're cool
     - I like you very
     - I like you you're nice
@@ -1426,7 +1373,6 @@ nlu:
 - intent: smalltalk/user_needs_advice
   examples: |
     - give me a wise advice
-    - I need advice
     - any advice
     - do you have any advice for me
     - advise me
@@ -1446,7 +1392,7 @@ nlu:
     - I don't feel very well
     - disappointed
     - super sad
-    - I'm so sad
+    - so sad
     - sad
     - very sad
     - unhappy
@@ -1455,43 +1401,42 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-    - I'm grieving
+    - grieving
     - depressed
     - feeling sad
     - upset
-    - I'm unhappy
-    - I'm having a bad day
+    - unhappy
+    - having a bad day
     - I want to cry
-    - I'm not happy
+    - not happy
 - intent: smalltalk/user_sleepy
   examples: |
     - I want to sleep
     - Sleepy
-    - I'm falling asleep
-    - I'm falling asleep on my feet
-    - I'm sleeping
+    - falling asleep
+    - falling asleep on my feet
+    - sleeping
 - intent: smalltalk/user_testing_agent
   examples: |
     - test
-    - I am testing you
+    - testing you
     - can I test you
     - I want to test you
     - just testing you
     - let me test you
-    - testing chatbot
     - testing
 - intent: smalltalk/user_tired
   examples: |
-    - I'm drained
+    - drained
     - I've overworked
-    - I'm exhausted
+    - exhausted
     - I grow weary
-    - I'm worn out
-    - I'm getting tired
+    - worn out
+    - getting tired
     - I feel tired
 - intent: smalltalk/user_waits
   examples: |
-    - I'm waiting
+    - waiting
     - still waiting
     - I'll wait
     - I can't wait anymore
@@ -1505,19 +1450,6 @@ nlu:
     - I'd be happy to see you again
     - I'll miss you
     - can I see you again
-- intent: smalltalk/user_wants_to_talk
-  examples: |
-    - I just want to talk
-    - let's discuss something
-    - let's have a discussion
-    - can I speak
-    - can I start speaking
-    - can we talk
-    - let's talk
-    - I want to talk to you
-    - I need to talk to you
-    - I want to speak with you
-    - can we chat
 - intent: smalltalk/user_will_be_back
   examples: |
     - I'll get back to you in a moment

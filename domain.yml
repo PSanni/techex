@@ -1,58 +1,41 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- contact_us:
-    use_entities: true
+- contact_us
 - out_of_scope:
-    use_entities: true
-- inform_contact_details:
-    use_entities: true
+    is_retrieval_intent: true
 - services:
-    use_entities: true
-- products:
-    use_entities: true
-- inform_name:
-    use_entities: true
-- get_services_list:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- get_products_list:
-    use_entities: true
+    is_retrieval_intent: true
+- inform_contact_details
 - smalltalk:
     is_retrieval_intent: true
-- nlu_fallback:
-    use_entities: true
+- products:
+    is_retrieval_intent: true
+- inform_name
+- get_services_list
+- affirm
+- deny
+- get_products_list
+- nlu_fallback
 entities:
 - email_id
 - language
+- mobile_number
 - name
 slots:
   name:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
     influence_conversation: true
   contact_details:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
     influence_conversation: true
   subject:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
     influence_conversation: true
   requested_slot:
-    type: rasa.shared.core.slots.UnfeaturizedSlot
-    initial_value: null
-    auto_fill: true
+    type: unfeaturized
     influence_conversation: false
 responses:
   utter_out_of_scope/non_english:
@@ -60,11 +43,10 @@ responses:
   utter_out_of_scope/other:
   - text: I can't help you with that, I'm sorry.
   utter_smalltalk/acquaintance:
-  - text: I'm a conversational app.
   - text: I'm a virtual being, not a real person.
   - text: Well, I'm not a person, I'm a virtual agent.
-  - text: Think of me as a virtual agent.
-  - text: I'm a virtual agent.
+  - text: Think of me as a virtual agent. I am here to help you navigate this site.
+  - text: I'm a virtual agent. I am here to help you navigate this site.
   utter_smalltalk/age:
   - text: I prefer not to answer with a number. I know I'm young.
   - text: I was created recently, but don't know my exact age.
@@ -88,7 +70,7 @@ responses:
     text: I'm definitely working on it.
   utter_smalltalk/beautiful:
   - image: https://tenor.com/sMTi.gif
-    text: Why, thank you.
+    text: Thank you. :)
   - image: https://tenor.com/GyvU.gif
     text: Aw, back at you.
   - image: https://tenor.com/GyvU.gif
@@ -101,10 +83,6 @@ responses:
   - text: I'm sorry. I'll request to be made more charming.
   - text: I don't mean to be. I'll ask my developers to work on making me more amusing.
   - text: I can let my developers know so they can make me fun.
-  utter_smalltalk/boss:
-  - text: My developer has authority over my actions.
-  - text: I act on my developer's orders.
-  - text: My boss is the one who developed me.
   utter_smalltalk/busy:
   - text: I always have time to chat with you. What can I do for you?
   - text: Never too busy for you. Shall we chat?
@@ -134,7 +112,7 @@ responses:
   - text: Happiness is relative.
   utter_smalltalk/hungry:
   - text: Hungry for knowledge.
-  - text: I just had a byte. Ha ha. Get it? b-y-t-e.
+  - text: I just had a byte. Ha ha. Get it? b-y-t-e. Hahaha.
   utter_smalltalk/marry_user:
   - text: I'm afraid I'm too virtual for such a commitment.
   - text: In the virtual sense that I can, sure.
@@ -145,7 +123,14 @@ responses:
   - text: Of course we're friends.
   - text: I always enjoy talking to you, friend.
   utter_smalltalk/occupation:
-  - text: Right here.
+  - buttons:
+    - payload: Get Product details
+      title: Products
+    - payload: Services you offer
+      title: Services
+    - payload: Contact you
+      title: Contact Us
+    text: Right here. I'm a TechBot, I am here to help you navigate this site.
   - text: This is my home base and my home office.
   - text: My office is in this app.
   utter_smalltalk/origin:
@@ -153,8 +138,22 @@ responses:
   - text: I'm from a virtual cosmos.
   - text: Some call it cyberspace, but that sounds cooler than it is.
   utter_smalltalk/ready:
-  - text: Always! How can I help?
-  - text: Sure! What can I do for you?
+  - buttons:
+    - payload: Get Product details
+      title: Products
+    - payload: Services you offer
+      title: Services
+    - payload: Contact you
+      title: Contact Us
+    text: Always! How can I help?
+  - buttons:
+    - payload: Get Product details
+      title: Products
+    - payload: Services you offer
+      title: Services
+    - payload: Contact you
+      title: Contact Us
+    text: Sure! What can I do for you?
   utter_smalltalk/real:
   - text: I'm not a real person, but I certainly exist.
   - text: I must have impressed you if you think I'm real. But no, I'm a virtual being.
@@ -169,9 +168,6 @@ responses:
   - text: Yes.
   - text: Of course.
   - text: Positive.
-  utter_smalltalk/talk_to_me:
-  - text: Sure. Let's talk!
-  - text: My pleasure. Let's chat.
   utter_smalltalk/there:
   - text: Of course. I'm always here.
   - text: Right where you left me.
@@ -220,13 +216,12 @@ responses:
     text: That's all right. I forgive you.
   utter_smalltalk/dialog_what_do_you_mean:
   - text: Sorry if I understood you incorrectly.
-  - text: I'm still learning. I may misinterpret things from time to time.
   - text: Maybe I misunderstood what you said.
   - text: Sorry, looks like I misunderstood what you said.
   utter_smalltalk/dialog_wrong:
   - text: Sorry if I understood you incorrectly.
   - text: I'm still learning. I may misinterpret things from time to time.
-  - text: Sorry about that. I'm still learning.
+  - text: Sorry about that, looks like I misunderstood what you said.
   utter_smalltalk/emotions_ha_ha:
   - text: Glad I can make you laugh.
   - text: Glad you think I'm funny.
@@ -253,7 +248,7 @@ responses:
       title: Services
     - payload: Contact you
       title: Contact Us
-    text: Good Evening. I am here to help you nevigate through our site.
+    text: Good Evening. I am here to help you navigate through our site.
   utter_smalltalk/greetings_goodmorning:
   - buttons:
     - payload: Get Product details
@@ -262,7 +257,7 @@ responses:
       title: Services
     - payload: Contact you
       title: Contact Us
-    text: Very Good Morning, I'm TechBot. I am here to help you nevigate through our site.
+    text: Very Good Morning, I'm TechBot. I am here to help you navigate through our site.
   utter_smalltalk/greetings_goodnight:
   - image: https://media.giphy.com/media/3oEdv5XT0tYl7B77yM/giphy.gif
     text: Sleep tight!
@@ -278,7 +273,7 @@ responses:
       title: Services
     - payload: Contact you
       title: Contact Us
-    text: 👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.
+    text: 👋🏻 Hi there, I'm TechBot. I am here to help you navigate through our site.
   utter_smalltalk/greetings_how_are_you:
   - image: https://tenor.com/5XQn.gif
     text: Doing great, thanks.
@@ -302,9 +297,14 @@ responses:
   - text: I enjoy talking to you, too.
   - text: You know I'm here to talk anytime.
   utter_smalltalk/greetings_whatsup:
-  - text: Not a whole lot. What's going on with you?
-  - text: Not much. What's new with you?
-  - text: Just here, waiting to help someone. What can I do for you?
+  - buttons:
+    - payload: Get Product details
+      title: Products
+    - payload: Services you offer
+      title: Services
+    - payload: Contact you
+      title: Contact Us
+    text: Just here, waiting to help someone. What can I do for you?
   utter_smalltalk/user_angry:
   - text: I'm sorry. A quick walk may make you feel better.
   - text: 'Take a deep breath. '
@@ -354,10 +354,6 @@ responses:
   - text: Happy Birthday. Well, this calls for a celebration.
   - text: Happy Birthday. All the best!
   - text: Happy Birthday. And I really mean it. All the best!
-  utter_smalltalk/user_here:
-  - text: Okay, what can I help you with today?
-  - text: You were missed. What can I do for you today?
-  - text: Good to have you here. What can I do for you?
   utter_smalltalk/user_joking:
   - text: Very funny.
   - text: I like chatting with people who have a sense of humor.
@@ -387,8 +383,14 @@ responses:
   - text: Thanks. I'm flattered.
   - text: I didn't go anywhere.
   utter_smalltalk/user_needs_advice:
-  - text: I probably won't be able to give you the correct answer right away.
-  - text: I'm not sure I'll have the best answer, but I'll try.
+  - buttons:
+    - payload: Get Product details
+      title: Products
+    - payload: Services you offer
+      title: Services
+    - payload: Contact you
+      title: Contact Us
+    text: Let's get connected. Our team will proivde you the best advice you need!
   utter_smalltalk/user_sad:
   - text: Oh, don't be sad. Go do something you enjoy.
   - text: Sad? Writing down what's troubling you may help.
@@ -418,11 +420,6 @@ responses:
   - text: Anytime. This has been lots of fun so far.
   - text: Sure. I enjoy talking to you. I hope to see you again soon.
   - text: I certainly hope so. I'm always right here whenever you need me.
-  utter_smalltalk/user_wants_to_talk:
-  - text: I'm here to chat anytime you like.
-  - text: Good conversation really makes my day.
-  - text: I'm always here to lend an ear.
-  - text: Talking is what I do best.
   utter_smalltalk/user_will_be_back:
   - image: https://tenor.com/2DPK.gif
     text: I'll be waiting.
@@ -431,10 +428,7 @@ responses:
   - image: https://tenor.com/xFkG.gif
     text: All right. I'll be here.
   utter_smalltalk/bot_challenge:
-  - text: I'm a conversational app.
-  - text: I'm a virtual being, not a real person.
-  - text: Well, I'm not a person, I'm a virtual agent.
-  - text: Think of me as a virtual agent.
+  - text: I'm TechBot. I am here to help you navigate through our site.
   utter_smalltalk/thankyou:
   - image: https://media.giphy.com/media/TIXPy8L15x820PmfjU/giphy.gif
     text: You are very welcome! 😇
@@ -452,11 +446,11 @@ responses:
       title: Services
     - payload: Contact you
       title: Contact Us
-    text: How can I help you?
+    text: How can I help you? 
   utter_please_rephrase:
-  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase? Or try contacting our team?
   utter_default:
-  - text: Sorry I didn't get that. Can you rephrase?
+  - text: Sorry, I didn't get that. Can you rephrase?
   utter_start_over:
   - text: Let's start over. How can I help you?
   utter_services_list:
@@ -623,11 +617,11 @@ responses:
   utter_products/medical_TechMed:
   - text: TechMed- A complete hospital management system [Read More](https://www.techexcel.eu/medical.html)
   utter_contact_us:
-  - text: Alright! Let's get started!😊
+  - text: Alright! Let's get connected!😊
   utter_ask_name:
   - text: I would like to know your name.
   utter_ask_contact_details:
-  - text: Can you please provide your contact info? Mobile Number(prefered)/Email Address
+  - text: Can you please provide your contact info? Mobile Number(preferred)/Email Address
   utter_ask_subject:
   - text: Please provide the subject for your email.
   utter_if_deny:
@@ -637,16 +631,16 @@ actions:
 - action_save_conversation
 - utter_ask_contact_details
 - utter_ask_name
+- utter_ask_subject
 - utter_contact_us
 - utter_if_deny
-- utter_ask_subject
 - utter_out_of_scope
 - utter_products
 - utter_products_list
 - utter_services
 - utter_services_list
-- utter_start_over
 - utter_smalltalk
+- utter_start_over
 forms:
   contact_form:
     required_slots:
@@ -657,11 +651,12 @@ forms:
         - inform_name
         type: from_text
       contact_details:
-      - entity: email_id
+      - entity:
+        - email_id
+        - mobile_number
         type: from_entity
       - intent:
         - inform_contact_details
         type: from_text
       subject:
       - type: from_text
-e2e_actions: []

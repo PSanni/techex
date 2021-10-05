@@ -75,7 +75,7 @@ class ActionContactConfirm(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         DataUpdate(tracker.get_slot("name"),tracker.get_slot("contact_details"),tracker.get_slot("subject"))
-        response = "Thank you for reaching us, {}. We'll reply to the {}.⏱️ \nWe usually reply within 24 business hours so stay tuned!".format(tracker.get_slot("name"), tracker.get_slot("contact_details"))
+        response = "Thank you for reaching us, {}. You will hear from us.⏱️ \nWe usually reply within 24 business hours so stay tuned!".format(tracker.get_slot("name"))
         dispatcher.utter_message(response)
         
         # save conversation in csv file
@@ -97,6 +97,7 @@ class ActionSaveConversation(Action):
         SaveChat(conversation)
         dispatcher.utter_message(text="All chat saved.")
         return []
+
 
  # To delete table
     # mydb = sqlite3.connect('..\contacts.db')

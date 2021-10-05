@@ -1,0 +1,385 @@
+2021-06-07 17:02:21,990 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-06-07 17:02:22,009 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-06-07 17:02:22,009 [DEBUG]  Using the default number of Sanic workers (1).
+2021-06-07 17:02:22,025 [INFO ]  Loading model models\20210605-205233.tar.gz...
+2021-06-07 17:02:23,309 [DEBUG]  Extracted model to 'C:\Users\Vivek\AppData\Local\Temp\tmp60bsung6'.
+2021-06-07 17:02:23,356 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-06-07 17:02:24,490 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-06-07 17:02:24,505 [INFO ]  Enabling coroutine debugging. Loop id 1555330988016.
+2021-06-07 17:02:24,507 [INFO ]  Loading model models\20210605-205233.tar.gz...
+2021-06-07 17:02:25,686 [DEBUG]  Extracted model to 'C:\Users\Vivek\AppData\Local\Temp\tmp3rl13zs_'.
+2021-06-07 17:02:25,905 [DEBUG]  Loading the model from C:\Users\Vivek\AppData\Local\Temp\tmp3rl13zs_\nlu\component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-06-07 17:02:26,221 [DEBUG]  Following metrics will be logged during training: 
+2021-06-07 17:02:26,222 [DEBUG]    t_loss (total loss)
+2021-06-07 17:02:26,223 [DEBUG]    i_acc (intent acc)
+2021-06-07 17:02:26,224 [DEBUG]    i_loss (intent loss)
+2021-06-07 17:02:26,224 [DEBUG]    e_f1 (entity f1)
+2021-06-07 17:02:26,224 [DEBUG]    e_loss (entity loss)
+2021-06-07 17:02:45,887 [DEBUG]  Finished loading the model.
+2021-06-07 17:02:45,898 [DEBUG]  Loading the model from C:\Users\Vivek\AppData\Local\Temp\tmp3rl13zs_\nlu\component_7_ResponseSelector.tf_model with finetune_mode=False...
+2021-06-07 17:02:45,979 [DEBUG]  Following metrics will be logged during training: 
+2021-06-07 17:02:45,980 [DEBUG]    t_loss (total loss)
+2021-06-07 17:02:45,980 [DEBUG]    r_acc (response acc)
+2021-06-07 17:02:45,981 [DEBUG]    r_loss (response loss)
+2021-06-07 17:02:51,011 [DEBUG]  Finished loading the model.
+2021-06-07 17:02:51,038 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-06-07 17:02:51,039 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-06-07 17:02:52,162 [DEBUG]  Extracted model to 'C:\Users\Vivek\AppData\Local\Temp\tmprhk9ygbz'.
+2021-06-07 17:02:52,328 [DEBUG]  Loading the model from C:\Users\Vivek\AppData\Local\Temp\tmprhk9ygbz\core\policy_1_TEDPolicy\ted_policy.tf_model with finetune_mode=False...
+2021-06-07 17:03:06,588 [DEBUG]  Finished loading the model.
+2021-06-07 17:03:06,613 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-06-07 17:03:06,614 [INFO ]  Rasa server is up and running.
+2021-06-07 17:11:02,332 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-06-07 17:11:02,375 [INFO ]  Loading model models\20210605-205233.tar.gz...
+2021-06-07 17:11:04,915 [INFO ]  Loading model models\20210605-205233.tar.gz...
+2021-06-07 17:11:46,145 [INFO ]  Rasa server is up and running.
+2021-06-07 17:48:24,444 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\Vivek\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 931, in handle_request
+    response = await response
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 101, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 52, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2021-06-07 17:48:54,507 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\Vivek\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 931, in handle_request
+    response = await response
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 101, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 52, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2021-06-07 17:48:56,119 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\Vivek\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 931, in handle_request
+    response = await response
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 101, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 52, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2021-06-07 17:53:05,117 [ERROR]  No text message defined in request_body. Add text message to request body in order to obtain the intent and extracted entities.
+2021-06-07 17:54:14,073 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\Vivek\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 931, in handle_request
+    response = await response
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 101, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 52, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2021-06-07 17:54:34,359 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\Vivek\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 931, in handle_request
+    response = await response
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 101, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 52, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2021-06-07 17:59:06,255 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-06-07 17:59:06,266 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-06-07 17:59:06,267 [DEBUG]  Using the default number of Sanic workers (1).
+2021-06-07 17:59:06,291 [INFO ]  Loading model models\20210605-205233.tar.gz...
+2021-06-07 17:59:08,813 [DEBUG]  Extracted model to 'C:\Users\Vivek\AppData\Local\Temp\tmpdw4_4wul'.
+2021-06-07 17:59:08,871 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-06-07 17:59:10,294 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-06-07 17:59:10,308 [INFO ]  Enabling coroutine debugging. Loop id 2088450291696.
+2021-06-07 17:59:10,314 [INFO ]  Loading model models\20210605-205233.tar.gz...
+2021-06-07 17:59:11,651 [DEBUG]  Extracted model to 'C:\Users\Vivek\AppData\Local\Temp\tmphnpaymux'.
+2021-06-07 17:59:15,038 [DEBUG]  Loading the model from C:\Users\Vivek\AppData\Local\Temp\tmphnpaymux\nlu\component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-06-07 17:59:16,831 [DEBUG]  Following metrics will be logged during training: 
+2021-06-07 17:59:16,832 [DEBUG]    t_loss (total loss)
+2021-06-07 17:59:16,832 [DEBUG]    i_acc (intent acc)
+2021-06-07 17:59:16,833 [DEBUG]    i_loss (intent loss)
+2021-06-07 17:59:16,833 [DEBUG]    e_f1 (entity f1)
+2021-06-07 17:59:16,834 [DEBUG]    e_loss (entity loss)
+2021-06-07 17:59:40,685 [DEBUG]  Finished loading the model.
+2021-06-07 17:59:40,813 [DEBUG]  Loading the model from C:\Users\Vivek\AppData\Local\Temp\tmphnpaymux\nlu\component_7_ResponseSelector.tf_model with finetune_mode=False...
+2021-06-07 17:59:40,898 [DEBUG]  Following metrics will be logged during training: 
+2021-06-07 17:59:40,898 [DEBUG]    t_loss (total loss)
+2021-06-07 17:59:40,899 [DEBUG]    r_acc (response acc)
+2021-06-07 17:59:40,899 [DEBUG]    r_loss (response loss)
+2021-06-07 17:59:46,186 [DEBUG]  Finished loading the model.
+2021-06-07 17:59:46,211 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-06-07 17:59:46,212 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-06-07 17:59:47,328 [DEBUG]  Extracted model to 'C:\Users\Vivek\AppData\Local\Temp\tmp60nw2ns_'.
+2021-06-07 17:59:48,393 [DEBUG]  Loading the model from C:\Users\Vivek\AppData\Local\Temp\tmp60nw2ns_\core\policy_1_TEDPolicy\ted_policy.tf_model with finetune_mode=False...
+2021-06-07 18:00:03,313 [DEBUG]  Finished loading the model.
+2021-06-07 18:00:03,409 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-06-07 18:00:03,411 [INFO ]  Rasa server is up and running.
+2021-06-07 18:01:44,914 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\Vivek\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 931, in handle_request
+    response = await response
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 101, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\vivek\anaconda3\envs\convai\lib\site-packages\rasa\core\channels\rest.py", line 52, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2021-06-07 18:06:38,852 [DEBUG]  Issuing ticket for conversation 'test_user'.
+2021-06-07 18:06:38,853 [DEBUG]  Acquiring lock for conversation 'test_user'.
+2021-06-07 18:06:38,854 [DEBUG]  Acquired lock for conversation 'test_user'.
+2021-06-07 18:06:38,855 [DEBUG]  Could not find tracker for conversation ID 'test_user'.
+2021-06-07 18:06:38,857 [DEBUG]  Starting a new session for conversation ID 'test_user'.
+2021-06-07 18:06:38,882 [DEBUG]  Policy prediction ended with events '[]'.
+2021-06-07 18:06:38,883 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x000001E66C93FC40>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-06-07 18:06:38,884 [DEBUG]  Current slot values: 
+	name: None
+	contact_details: None
+	subject: None
+	requested_slot: None
+	session_started_metadata: None
+2021-06-07 18:06:39,519 [DEBUG]  Adding following selector key to message property: default
+2021-06-07 18:06:39,520 [DEBUG]  Received user message 'Hi there!' with intent '{'id': -5492564525015834465, 'name': 'greet', 'confidence': 0.9998385906219482}' and entities '[]'
+2021-06-07 18:06:39,522 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-06-07 18:06:39,523 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-06-07 18:06:39,545 [DEBUG]  There is a memorised next action 'utter_greet1'
+2021-06-07 18:06:39,565 [DEBUG]  TED predicted 'utter_greet1' based on user intent.
+2021-06-07 18:06:39,565 [DEBUG]  Current tracker state:
+[state 1] user text: Hi there! | previous action name: action_listen
+2021-06-07 18:06:39,567 [DEBUG]  There is no applicable rule.
+2021-06-07 18:06:39,567 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-06-07 18:06:39,568 [DEBUG]  There is a rule for the next action 'utter_greet1'.
+2021-06-07 18:06:39,569 [DEBUG]  Made prediction using user intent.
+2021-06-07 18:06:39,570 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-06-07 18:06:39,570 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-06-07 18:06:39,572 [DEBUG]  Predicted next action 'utter_greet1' with confidence 1.00.
+2021-06-07 18:06:39,625 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001E66C93FC10>]'.
+2021-06-07 18:06:39,628 [DEBUG]  Action 'utter_greet1' ended with events '[BotUttered('👋🏻 Hi there, I'm TechBot. I am here to help you nevigate through our site.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet1"}, 1623069399.6254663)]'.
+2021-06-07 18:06:39,643 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+2021-06-07 18:06:39,646 [DEBUG]  There is a memorised next action 'utter_greet2'
+2021-06-07 18:06:39,667 [DEBUG]  TED predicted 'utter_greet2' based on user intent.
+2021-06-07 18:06:39,669 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+2021-06-07 18:06:39,671 [DEBUG]  There is a rule for the next action 'utter_greet2'.
+2021-06-07 18:06:39,673 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-06-07 18:06:39,675 [DEBUG]  Predicted next action 'utter_greet2' with confidence 1.00.
+2021-06-07 18:06:39,679 [DEBUG]  Policy prediction ended with events '[]'.
+2021-06-07 18:06:39,691 [DEBUG]  Action 'utter_greet2' ended with events '[BotUttered('Let me know if you have any questions regarding us or Select a topic below:', {"elements": null, "quick_replies": null, "buttons": [{"payload": "Get Product details", "title": "Products"}, {"payload": "Services you offer", "title": "Services"}, {"payload": "Contact you", "title": "Contact Us"}], "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet2"}, 1623069399.6794634)]'.
+2021-06-07 18:06:39,696 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+2021-06-07 18:06:39,698 [DEBUG]  There is a memorised next action 'action_listen'
+2021-06-07 18:06:39,713 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-06-07 18:06:39,715 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+2021-06-07 18:06:39,717 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-06-07 18:06:39,719 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-06-07 18:06:39,721 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-06-07 18:06:39,724 [DEBUG]  Policy prediction ended with events '[]'.
+2021-06-07 18:06:39,726 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-06-07 18:06:39,730 [DEBUG]  Deleted lock for conversation 'test_user'.
+2021-06-07 18:07:44,669 [DEBUG]  Issuing ticket for conversation 'test_user'.
+2021-06-07 18:07:44,671 [DEBUG]  Acquiring lock for conversation 'test_user'.
+2021-06-07 18:07:44,672 [DEBUG]  Acquired lock for conversation 'test_user'.
+2021-06-07 18:07:44,673 [DEBUG]  Recreating tracker for id 'test_user'
+2021-06-07 18:07:44,777 [DEBUG]  Adding following selector key to message property: default
+2021-06-07 18:07:44,778 [DEBUG]  Received user message 'What kind of services do you offer?' with intent '{'id': -3548575489906162000, 'name': 'get_services_list', 'confidence': 0.9998967051506042}' and entities '[]'
+2021-06-07 18:07:44,779 [DEBUG]  Logged UserUtterance - tracker now has 11 events.
+2021-06-07 18:07:44,780 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+[state 4] user intent: get_services_list | previous action name: action_listen
+2021-06-07 18:07:44,782 [DEBUG]  There is a memorised next action 'utter_services_list'
+2021-06-07 18:07:44,797 [DEBUG]  TED predicted 'utter_services_list' based on user intent.
+2021-06-07 18:07:44,799 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+[state 4] user text: What kind of services do you offer? | previous action name: action_listen
+2021-06-07 18:07:44,804 [DEBUG]  There is no applicable rule.
+2021-06-07 18:07:44,808 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+[state 4] user intent: get_services_list | previous action name: action_listen
+2021-06-07 18:07:44,811 [DEBUG]  There is no applicable rule.
+2021-06-07 18:07:44,812 [DEBUG]  Made prediction using user intent.
+2021-06-07 18:07:44,813 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-06-07 18:07:44,814 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-06-07 18:07:44,815 [DEBUG]  Predicted next action 'utter_services_list' with confidence 1.00.
+2021-06-07 18:07:44,818 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001E66C93FA90>]'.
+2021-06-07 18:07:44,820 [DEBUG]  Action 'utter_services_list' ended with events '[BotUttered('Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?', {"elements": null, "quick_replies": null, "buttons": [{"payload": "website design", "title": "Website Design"}, {"payload": "bespoke development", "title": "Bespoke Web Development"}, {"payload": "ecommerce solution services", "title": "Ecommerce Solution"}, {"payload": "mobile app development", "title": "Mobile App Development"}, {"payload": "digital merketing", "title": "Digital Marketing"}, {"payload": "open source customization", "title": "Open Source Customization"}, {"payload": "corporate branding", "title": "Corporate Branding"}], "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_services_list"}, 1623069464.8180075)]'.
+2021-06-07 18:07:44,828 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: action_listen
+[state 1] user intent: greet | previous action name: utter_greet1
+[state 2] user intent: greet | previous action name: utter_greet2
+[state 3] user intent: get_services_list | previous action name: action_listen
+[state 4] user intent: get_services_list | previous action name: utter_services_list
+2021-06-07 18:07:44,831 [DEBUG]  There is a memorised next action 'action_listen'
+2021-06-07 18:07:44,861 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-06-07 18:07:44,863 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+[state 4] user intent: get_services_list | previous action name: action_listen
+[state 5] user intent: get_services_list | previous action name: utter_services_list
+2021-06-07 18:07:44,865 [DEBUG]  There is no applicable rule.
+2021-06-07 18:07:44,866 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-06-07 18:07:44,871 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-06-07 18:07:44,874 [DEBUG]  Policy prediction ended with events '[]'.
+2021-06-07 18:07:44,877 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-06-07 18:07:44,880 [DEBUG]  Deleted lock for conversation 'test_user'.
+2021-06-07 18:12:13,523 [DEBUG]  Issuing ticket for conversation 'test_user'.
+2021-06-07 18:12:13,526 [DEBUG]  Acquiring lock for conversation 'test_user'.
+2021-06-07 18:12:13,528 [DEBUG]  Acquired lock for conversation 'test_user'.
+2021-06-07 18:12:13,530 [DEBUG]  Recreating tracker for id 'test_user'
+2021-06-07 18:12:13,573 [DEBUG]  Adding following selector key to message property: default
+2021-06-07 18:12:13,575 [DEBUG]  Received user message 'What kind of services do you offer?' with intent '{'id': -3548575489906162000, 'name': 'get_services_list', 'confidence': 0.9998967051506042}' and entities '[]'
+2021-06-07 18:12:13,577 [DEBUG]  Logged UserUtterance - tracker now has 16 events.
+2021-06-07 18:12:13,579 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: utter_greet1
+[state 1] user intent: greet | previous action name: utter_greet2
+[state 2] user intent: get_services_list | previous action name: action_listen
+[state 3] user intent: get_services_list | previous action name: utter_services_list
+[state 4] user intent: get_services_list | previous action name: action_listen
+2021-06-07 18:12:13,581 [DEBUG]  There is no memorised next action
+2021-06-07 18:12:13,601 [DEBUG]  TED predicted 'utter_services_list' based on user intent.
+2021-06-07 18:12:13,603 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+[state 4] user intent: get_services_list | previous action name: action_listen
+[state 5] user intent: get_services_list | previous action name: utter_services_list
+[state 6] user text: What kind of services do you offer? | previous action name: action_listen
+2021-06-07 18:12:13,611 [DEBUG]  There is no applicable rule.
+2021-06-07 18:12:13,614 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+[state 4] user intent: get_services_list | previous action name: action_listen
+[state 5] user intent: get_services_list | previous action name: utter_services_list
+[state 6] user intent: get_services_list | previous action name: action_listen
+2021-06-07 18:12:13,617 [DEBUG]  There is no applicable rule.
+2021-06-07 18:12:13,618 [DEBUG]  Made prediction using user intent.
+2021-06-07 18:12:13,618 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-06-07 18:12:13,619 [DEBUG]  Predicted next action using policy_1_TEDPolicy.
+2021-06-07 18:12:13,620 [DEBUG]  Predicted next action 'utter_services_list' with confidence 0.99.
+2021-06-07 18:12:13,624 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001E64504CEB0>]'.
+2021-06-07 18:12:13,627 [DEBUG]  Action 'utter_services_list' ended with events '[BotUttered('Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?', {"elements": null, "quick_replies": null, "buttons": [{"payload": "website design", "title": "Website Design"}, {"payload": "bespoke development", "title": "Bespoke Web Development"}, {"payload": "ecommerce solution services", "title": "Ecommerce Solution"}, {"payload": "mobile app development", "title": "Mobile App Development"}, {"payload": "digital merketing", "title": "Digital Marketing"}, {"payload": "open source customization", "title": "Open Source Customization"}, {"payload": "corporate branding", "title": "Corporate Branding"}], "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_services_list"}, 1623069733.6244845)]'.
+2021-06-07 18:12:13,631 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: utter_greet2
+[state 1] user intent: get_services_list | previous action name: action_listen
+[state 2] user intent: get_services_list | previous action name: utter_services_list
+[state 3] user intent: get_services_list | previous action name: action_listen
+[state 4] user intent: get_services_list | previous action name: utter_services_list
+2021-06-07 18:12:13,635 [DEBUG]  There is no memorised next action
+2021-06-07 18:12:13,704 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-06-07 18:12:13,709 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet1
+[state 3] user intent: greet | previous action name: utter_greet2
+[state 4] user intent: get_services_list | previous action name: action_listen
+[state 5] user intent: get_services_list | previous action name: utter_services_list
+[state 6] user intent: get_services_list | previous action name: action_listen
+[state 7] user intent: get_services_list | previous action name: utter_services_list
+2021-06-07 18:12:13,712 [DEBUG]  There is no applicable rule.
+2021-06-07 18:12:13,714 [DEBUG]  Predicted next action using policy_1_TEDPolicy.
+2021-06-07 18:12:13,721 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-06-07 18:12:13,730 [DEBUG]  Policy prediction ended with events '[]'.
+2021-06-07 18:12:13,742 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-06-07 18:12:13,745 [DEBUG]  Deleted lock for conversation 'test_user'.
+2021-06-07 18:12:25,988 [DEBUG]  Issuing ticket for conversation 'default'.
+2021-06-07 18:12:25,989 [DEBUG]  Acquiring lock for conversation 'default'.
+2021-06-07 18:12:25,991 [DEBUG]  Acquired lock for conversation 'default'.
+2021-06-07 18:12:25,993 [DEBUG]  Could not find tracker for conversation ID 'default'.
+2021-06-07 18:12:25,994 [DEBUG]  Starting a new session for conversation ID 'default'.
+2021-06-07 18:12:25,996 [DEBUG]  Policy prediction ended with events '[]'.
+2021-06-07 18:12:25,997 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x000001E66CA45520>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-06-07 18:12:25,999 [DEBUG]  Current slot values: 
+	name: None
+	contact_details: None
+	subject: None
+	requested_slot: None
+	session_started_metadata: None
+2021-06-07 18:12:26,031 [DEBUG]  Adding following selector key to message property: default
+2021-06-07 18:12:26,032 [DEBUG]  Received user message 'What kind of services do you offer?' with intent '{'id': -3548575489906162000, 'name': 'get_services_list', 'confidence': 0.9998967051506042}' and entities '[]'
+2021-06-07 18:12:26,036 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-06-07 18:12:26,037 [DEBUG]  Current tracker state:
+[state 1] user intent: get_services_list | previous action name: action_listen
+2021-06-07 18:12:26,038 [DEBUG]  There is a memorised next action 'utter_services_list'
+2021-06-07 18:12:26,045 [DEBUG]  TED predicted 'utter_services_list' based on user intent.
+2021-06-07 18:12:26,046 [DEBUG]  Current tracker state:
+[state 1] user text: What kind of services do you offer? | previous action name: action_listen
+2021-06-07 18:12:26,047 [DEBUG]  There is no applicable rule.
+2021-06-07 18:12:26,048 [DEBUG]  Current tracker state:
+[state 1] user intent: get_services_list | previous action name: action_listen
+2021-06-07 18:12:26,049 [DEBUG]  There is no applicable rule.
+2021-06-07 18:12:26,050 [DEBUG]  Made prediction using user intent.
+2021-06-07 18:12:26,052 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-06-07 18:12:26,053 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-06-07 18:12:26,054 [DEBUG]  Predicted next action 'utter_services_list' with confidence 1.00.
+2021-06-07 18:12:26,055 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001E66CA45580>]'.
+2021-06-07 18:12:26,056 [DEBUG]  Action 'utter_services_list' ended with events '[BotUttered('Here are the services we offer, I'll be pleased to tell you more about them! Select one or write about what you are looking for?', {"elements": null, "quick_replies": null, "buttons": [{"payload": "website design", "title": "Website Design"}, {"payload": "bespoke development", "title": "Bespoke Web Development"}, {"payload": "ecommerce solution services", "title": "Ecommerce Solution"}, {"payload": "mobile app development", "title": "Mobile App Development"}, {"payload": "digital merketing", "title": "Digital Marketing"}, {"payload": "open source customization", "title": "Open Source Customization"}, {"payload": "corporate branding", "title": "Corporate Branding"}], "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_services_list"}, 1623069746.055445)]'.
+2021-06-07 18:12:26,059 [DEBUG]  Current tracker state:
+[state 1] user intent: get_services_list | previous action name: action_listen
+[state 2] user intent: get_services_list | previous action name: utter_services_list
+2021-06-07 18:12:26,060 [DEBUG]  There is a memorised next action 'action_listen'
+2021-06-07 18:12:26,072 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-06-07 18:12:26,074 [DEBUG]  Current tracker state:
+[state 1] user intent: get_services_list | previous action name: action_listen
+[state 2] user intent: get_services_list | previous action name: utter_services_list
+2021-06-07 18:12:26,076 [DEBUG]  There is no applicable rule.
+2021-06-07 18:12:26,077 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-06-07 18:12:26,077 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-06-07 18:12:26,078 [DEBUG]  Policy prediction ended with events '[]'.
+2021-06-07 18:12:26,079 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-06-07 18:12:26,080 [DEBUG]  Deleted lock for conversation 'default'.

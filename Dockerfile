@@ -33,6 +33,7 @@ USER 1001
 # RUN python -m pip install rasa
 
 # WORKDIR /app
+# ENV HOME=/app
 # COPY . .
 
 # # rasa train 

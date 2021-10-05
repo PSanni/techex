@@ -44,7 +44,7 @@ nlu:
 - intent: products/sales_TechSales
   examples: |
     - TechSales
-    - Sales forecast, unexpected market predictions using ML
+    - Sales forecast, unexpected market predictions using ML machine learning
     - sales forecasting using machine learning
     - revenue predictions
 - intent: products/sales_TechSearch
@@ -89,8 +89,9 @@ nlu:
 - intent: products/digital_marketing_TechReco
   examples: |
     - TechReco
-    - Product Recommendation system based on user profiles using ML
+    - Product Recommendation system based on user profiles using ML machine learning
     - recommendation system using machine learning
+    - ML machine learning related product
     - information filtering system that seeks to predict the "rating" or "preference" of a user
     - finds out the match between user and item and imputes the similarities between users and items for recommendation
 - intent: products/digital_marketing_TechChat
@@ -106,7 +107,7 @@ nlu:
 - intent: products/digital_marketing_Sentiman
   examples: |
     - Sentiman
-    - Pre and post marketing analysis of products using ML
+    - Pre and post marketing analysis of products using ML machine learning
     - Market analysis
     - to create smarter customer segmentations, deliver more relevant creative campaigns
     - to measure marketers performance more effectively
@@ -154,11 +155,12 @@ nlu:
 - intent: products/finance_FinRisk
   examples: |
     - FinRisk
-    - ML based financial risk analysis tool
+    - ML machine learning based financial risk analysis tool
     - financial risk analysis using machine learning
     - identify financial risks
     - measure financial risks
     - fraud detection
+    - ML machine learning related
     - automate trading activities
     - financial advisory services
     - credit risk modelling
