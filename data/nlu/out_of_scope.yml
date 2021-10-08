@@ -16,12 +16,12 @@ nlu:
     - de que lugar eres?
     - epdi iruka
     - eres humana
-    - do you speak [LAHNDA](language)
-    - do you understand [JAVANESE](language)
-    - i know [GERMAN](language)
-    - i speak [KOREAN](language)
-    - i know [FRENCH](language) 
-    - do you understand [TELUGU](language)
+    - do you speak [LAHNDA](LANGUAGE)
+    - do you understand [JAVANESE](LANGUAGE)
+    - i know [GERMAN](LANGUAGE)
+    - i speak [KOREAN](LANGUAGE)
+    - i know [FRENCH](LANGUAGE) 
+    - do you understand [TELUGU](LANGUAGE)
     - kalhmera sara ti kaneis
     - kannst du auch deutsch?
     - kannst du dies auch auf deutsch?
@@ -49,20 +49,20 @@ nlu:
     - αστεία λές
     - rasa codigo abierto
     - 卧槽
-    - [german](language)?
-    - can you talk in [hindi](language)
-    - do you know [hindi](language)
-    - can you understand [CHINESE](language)
-    - do you know [SPANISH](language)
-    - can you speak [MANDARIN](language)
-    - do you understand [ARABIC](language) 
-    - i understand [PORTUGUESE](language) 
-    - do you speak [BENGALI](language)
-    - do you understand [RUSSIAN](language)
-    - can you speak [JAPANESE](language)
-    - do you speak [MARATHI](language)
-    - can you speak [TURKISH](language)
-    - can i speak in [TAMIL](language)
+    - [german](LANGUAGE)?
+    - can you talk in [hindi](LANGUAGE)
+    - do you know [hindi](LANGUAGE)
+    - can you understand [CHINESE](LANGUAGE)
+    - do you know [SPANISH](LANGUAGE)
+    - can you speak [MANDARIN](LANGUAGE)
+    - do you understand [ARABIC](LANGUAGE) 
+    - i understand [PORTUGUESE](LANGUAGE) 
+    - do you speak [BENGALI](LANGUAGE)
+    - do you understand [RUSSIAN](LANGUAGE)
+    - can you speak [JAPANESE](LANGUAGE)
+    - do you speak [MARATHI](LANGUAGE)
+    - can you speak [TURKISH](LANGUAGE)
+    - can i speak in [TAMIL](LANGUAGE)
 - intent: out_of_scope/other
   examples: |
     - 4 + 2 

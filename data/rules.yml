@@ -27,12 +27,19 @@ rules:
   - intent: nlu_fallback
   - action: utter_please_rephrase
 
-- rule: action contact form
+- rule: Activate contact form
+  steps:
+  - intent: contact_us
+  - action: utter_contact_form
+  - action: contact_form
+  - active_loop: contact_form
+
+- rule: Submit contact form
   condition:
   - active_loop: contact_form
   steps:
   - action: contact_form
+  - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - active_loop: null
   - action: action_contact_confirm

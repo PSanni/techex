@@ -62,79 +62,89 @@ nlu:
     - I want to speak with you
     - can we talk on in person
     - can we talk on mobile
+    - set up meeting
+    - lets get in touch
 - intent: inform_name
   examples: |
-    - [Harsh](name)
-    - I am [Nehal](name)
-    - I'm [Suhas](name)
-    - This is [Nidhi](name)
-    - [raj](name)
-    - my name is [Rohit](name) Patel
-    - it is [sam](name)
-    - call me [james](name) allen
-    - you can call me [aditya](name)
-    - it's [aryan](name) chaudhary
-    - i'm [joyal](name)
-    - [Ayush](name)
-    - this is [krupa](name) patel
-    - i am [khalid](name)
-    - i am [rohan](name)
-    - [viral](name)
-    - [Megna](name) prajapati
-    - i am [vivek](name)
-    - this is [Urvish](name)
-    - this is [ajay](name) speaking
-    - this is [sanni](name) here
-    - it's me [aryan](name)
-    - call me [dhruv](name)
-    - you can call me [joy](name)
-    - My name is joel but you can call me [joy](name)
-    - my name is (Anil)[name]
-    - [Kunjan](name)
-    - my name is (Hiral)[name] Gajjar
-    - [Aviraj](name) Patel
+    - [harsh](NAME)
+    - I am [nehal](NAME)
+    - I'm [Suhas](NAME)
+    - This is [Nidhi](NAME)
+    - [raj](NAME)
+    - my name is [Rohit](NAME) Patel
+    - it is [sam](NAME)
+    - call me [james](NAME) allen
+    - you can call me [aditya](NAME)
+    - it's [aryan](NAME) chaudhary
+    - i'm [joyal](NAME)
+    - [Ayush](NAME)
+    - this is [krupa](NAME) patel
+    - i am [khalid](NAME)
+    - i am [rohan](NAME)
+    - [viral](NAME)
+    - [Megna](NAME) prajapati
+    - i am [vivek](NAME)
+    - this is [Urvish](NAME)
+    - this is [ajay](NAME) speaking
+    - this is [Sunil](NAME) here
+    - it's me [Aryan](NAME)
+    - call me [dhruv](NAME)
+    - you can call me [joy](NAME)
+    - My name is joel but you can call me [joy](NAME)
+    - my name is [Anil](NAME)
+    - [Kunjan](NAME)
+    - my name is [Hiral](NAME) Gajjar
+    - [Aviraj](NAME) Patel
+    - it is [megna](NAME)
+    - [sunny](NAME)
+    - i am [shubham](NAME)
 - intent: inform_contact_details
   examples: |
-    - [example@rasa.com](email_id)
-    - my email is [example@yahoo.com](email_id)
-    - it's [example@gmail.com](email_id)
-    - it's [a@b.com](email_id)
-    - [xyz@hulaloo.ai](email_id)
-    - [asdf@asdf.com](email_id)
-    - [test@test.com](email_id)
-    - it is [fhh5@gmail.com](email_id)
-    - it's [h5651@yahoo.com](email_id)
-    - it is [xyz1@gmail.com](email_id)
-    - [vrtck2@gmail.com](email_id)
-    - it is [vvigfk4@abc.com](email_id)
-    - [viral34@gmail.com](email_id)
-    - it is [vivekprajapatu23232@gmail.com](email_id)
-    - [hp323@gmail.com](email_id)
-    - email add: [vvigfk4@yahoo.com](email_id)
-    - email: [vvigfk4@hotmail.com](email_id)
-    - mail: [vvigfk4@gmail.com](email_id)
-    - email address [vvigfk4@yahoo.com](email_id)
-    - email [vvigfk4@hotmail.com](email_id)
-    - mail [vvigfk4@gmail.com](email_id)
-    - phone [11232341243](mobile_number)
-    - it is [1234567896](mobile_number)
-    - my mobile number is [1234567896](mobile_number)
-    - my phone number is [919995553322](mobile_number)
-    - my cell number is [9090903423](mobile_number)
-    - you can call me on [4323567812](mobile_number) this phone number
-    - mobile [4323567812](mobile_number)
-    - phone [4323567812](mobile_number)
-    - it's [4323567812](mobile_number)
-    - [4323567812](mobile_number)
-    - mobile number: [4323567812](mobile_number)
-    - mobile: [4323567812](mobile_number)
-    - phone: [4323567812](mobile_number)
-    - mobile = [4323567812](mobile_number)
-    - phone = [4323567812](mobile_number)
-    - my mobile is [4323567812](mobile_number)
-    - my phone is [4323567812](mobile_number)
-    - it is [9090542234](mobile_number)
-    - it is [4757472343](mobile_number)
+    - [example@rasa.com](EMAIL_ID)
+    - my email is [example@yahoo.com](EMAIL_ID)
+    - it's [example@gmail.com](EMAIL_ID)
+    - it's [a@b.com](EMAIL_ID)
+    - [xyz@hulaloo.ai](EMAIL_ID)
+    - [asdf@asdf.com](EMAIL_ID)
+    - [test@test.com](EMAIL_ID)
+    - it is [fhh5@gmail.com](EMAIL_ID)
+    - it's [h5651@yahoo.com](EMAIL_ID)
+    - it is [xyz1@gmail.com](EMAIL_ID)
+    - [vrtck2@gmail.com](EMAIL_ID)
+    - it is [vvigfk4@abc.com](EMAIL_ID)
+    - [viral34@gmail.com](EMAIL_ID)
+    - it is [vivekprajapatu23232@gmail.com](EMAIL_ID)
+    - [hp323@gmail.com](EMAIL_ID)
+    - email add: [vvigfk4@yahoo.com](EMAIL_ID)
+    - email: [dgfgf@hotmail.com](EMAIL_ID)
+    - mail: [wegfk4@gmail.com](EMAIL_ID)
+    - email address [vvigfk4@yahoo.com](EMAIL_ID)
+    - email [vvsigfk4@hotmail.com](EMAIL_ID)
+    - mail [vvissdsgfk4@gmail.com](EMAIL_ID)
+    - phone [11232341243](MOBILE_NUM)
+    - it is [1234567896](MOBILE_NUM)
+    - my mobile number is [1234567896](MOBILE_NUM)
+    - my phone number is [919995553322](MOBILE_NUM)
+    - my cell number is [9090903423](MOBILE_NUM)
+    - you can call me on [4323567812](MOBILE_NUM) this phone number
+    - mobile [4323567812](MOBILE_NUM)
+    - phone [4323567812](MOBILE_NUM)
+    - it's [4323567812](MOBILE_NUM)
+    - [4323567812](MOBILE_NUM)
+    - mobile number: [4323567812](MOBILE_NUM)
+    - mobile: [4323567812](MOBILE_NUM)
+    - phone: [4323567812](MOBILE_NUM)
+    - mobile = [4323567812](MOBILE_NUM)
+    - phone = [4323567812](MOBILE_NUM)
+    - my mobile is [4323567812](MOBILE_NUM)
+    - my phone is [4323567812](MOBILE_NUM)
+    - it is [9090542234](MOBILE_NUM)
+    - it is [4757472343](MOBILE_NUM)
+    - it's [megna@megna.eu](NAME)
+    - it is [megna454@gmail.com](EMAIL_ID)
+    - it's [5747306854](MOBILE_NUM)
+    - mobile no [878594023](MOBILE_NUM)
+    - mobile num [3322454321](MOBILE_NUM)
 - intent: affirm
   examples: |
     - Y
@@ -143,91 +153,32 @@ nlu:
     - of course
     - that sounds good
     - correct
-    - yeah
     - hell yes
-    - yess please
     - yup
     - yes please
     - yes plz
-    - Sure
-    - Ok
-    - sweet
-    - cool,
-    - yes...
-    - ok
-    - ye
-    - That would be great
     - YES
     - YUP
     - Yea
-    - Yeah
-    - Yeah sure
-    - Yep
-    - Yep that's fine
-    - Yep!
-    - Yepp
-    - Yes
-    - Yes I do
-    - Yes please
-    - Yes please!
-    - Yes, I accept
-    - Accept
-    - Awesome!
     - Good
     - Great
     - I accept
-    - I accept.
     - I agree
-    - I am using it
-    - I changed my mind. I want to accept it
-    - I do
-    - I get it
-    - I guess so
-    - I have used it in the past
-    - I will
-    - I'd absolutely love that
-    - I'm sure I will!
-    - I'm using it
     - Nice
     - Ofcourse
     - Oh yes
     - Oh, ok
     - PLEASE
     - SURE
-    - Sweet
-    - Yes.
-    - Yup
-    - a little
-    - absolutely
-    - accept
     - accepted
     - agreed
     - ah ok
     - alright
-    - alright, cool
-    - amayzing
-    - amazing!
-    - awesome
-    - awesome!
-    - confirm
-    - cool story bro
-    - definitely yes without a doubt
     - done
     - fair enough
     - fcourse
     - fine
     - fuck yeah!
-    - go
-    - go ahead
-    - go for it
-    - going super well
-    - good.
-    - great
-    - great lets do that
-    - great!
-    - hell yeah
-    - hm, i'd like that
-    - how nice!
     - i accept
     - i agree
     - i am!
@@ -240,130 +191,24 @@ nlu:
     - jo
     - k
     - kk
-    - lets do it
-    - lets do this
-    - not bad
-    - ofcoure i do
-    - ofcourse
-    - oh awesome!
-    - oh cool
-    - oh good !!
-    - oh super
-    - ok cool
-    - ok fine
-    - ok friend
-    - ok good
-    - ok great
-    - ok i accept
-    - ok, I behave now
-    - ok, I understood
-    - ok,
-    - ok...
-    - okay cool
-    - okay sure
-    - okay..
-    - oki doki
-    - okie
-    - ook
-    - oui
-    - perfect
-    - please
-    - si
-    - sort of
-    - sure
-    - sure thing
-    - sure!
-    - that is cool
-    - that ok
-    - that sounds fine
-    - that's great
-    - thats fine
-    - thats good
-    - thats great
-    - top
-    - uh-huh
-    - very much
-    - well yes
-    - ya
-    - ya cool
-    - ya go for it
-    - ya i want
-    - ya please
-    - ya thats cool
-    - yaah
-    - yap
-    - yaps
-    - yas
-    - yay
-    - ye splease
-    - yea
-    - yeah do that
-    - yeah sure
-    - yeah'=
-    - yeah, why not
-    - yeeeeezzzzz
-    - yeeees
-    - yep
-    - yep i want that
-    - yep if i have to
-    - yep please
-    - yep that's nice
-    - yep thats cool
-    - yep, will do
-    - yep. :/
-    - yes ...
-    - yes I do
-    - yes accept please
-    - yes baby
-    - yes cool
-    - yes give me information
     - yes go ahead
-    - yes go for it
-    - yes great
-    - yes i accept
-    - yes i agree
-    - yes i have built a bot before
-    - yes i have!
     - yes it is
     - yes it was okay
     - yes of course
     - yes pleae
-    - yes please!
     - yes pls
-    - yes sirfr
-    - yes that's great
-    - yes that's what i want
-    - yes you can
-    - yes'
-    - yes, I'd love to
-    - yes, cool
-    - yes, give me information, please
-    - yes,i am
     - yes.
     - yesh
     - yess
     - yessoo
     - yesss
-    - yesssss
-    - yesyestyes
-    - yesyesyes
-    - yez
-    - yop
-    - you asked me a yes or no question, which i answered with yes
-    - you got me, I accept, if you want me to
-    - yres
     - ys
     - yyeeeh
     - Okay cool
     - ok..
-    - considering
-    - More a less
-    - sounds good!
     - really
     - that's correct
     - it's fine
-    - sounds good
-    - okay
     - okie dokie
     - do it
     - I guess
@@ -377,7 +222,6 @@ nlu:
     - I think so
     - right
     - okay then
-    - that s okay
     - oh yes
     - yes sure
     - obviously
@@ -388,14 +232,9 @@ nlu:
     - ok sure
     - ok yes
     - yes correct
-    - ok thank you
     - looks good
-    - yes thank you
     - definitely
-    - yes right
-    - yes I would like to
     - alrighty
-    - yes definitely
     - yeh
     - yes it is correct
     - yeah that's right
@@ -411,9 +250,6 @@ nlu:
     - okay that's fine
     - yeah exactly
     - that is ok
-    - this is correct
-    - ok go ahead
-    - yes this is correct
     - nevermind its okay
     - okey
     - yes for sure
@@ -436,31 +272,7 @@ nlu:
     - Nothing!
     - nevermind
     - i decline
-    - i don not like this
-    - i don't think so
-    - i don't want either of those
-    - i don't want to
-    - i don't want to give you my email
-    - i dont want to
-    - i dont want to accept :P lol
-    - i guess it means - no
-    - i'm afraid not
-    - i'm not sure
-    - I don't want to
-    - I don't want to give it to you
-    - I don't want to say
-    - I dont want to tell
-    - I'm not giving you my email address
-    - I'm not going to give it to you
-    - NEIN
     - NO
-    - NO DON"T WANT THIS!
-    - Nah
-    - Neither
-    - Never
-    - Nevermind
-    - No
-    - No, not really.
     - No,
     - No.
     - Nopes
@@ -469,12 +281,7 @@ nlu:
     - decline
     - definitely not
     - deny
-    - it is going pretty badly
-    - it sucks
-    - it sux
     - na
-    - nah I'm good
-    - nah not for me
     - nah, first time
     - nah, i'm good
     - nehi
@@ -483,49 +290,18 @@ nlu:
     - never mind
     - no :(
     - no I dont want
-    - no I haven't decided yet if I want to sign up
-    - no and no again
-    - no bots at all
     - no go
     - no i can't
     - no i don't accept
-    - no i dont want to
-    - no i dont want to accept :P lol
     - no i won't
     - no ma'am
     - no sir
     - no sorry
-    - no thank s
-    - no thank you
-    - no thanks
-    - no you did it wrong
-    - no!!!!
-    - no, i hate it
-    - no, my frst time
-    - no, thank you
-    - no, thanks
-    - no, thankyou
-    - no. u r idiot
+    - no
     - non
     - noooooooooo
     - nop
-    - nope!
-    - nope. i am good
-    - not going well at all
-    - not right now
-    - not yet
-    - sorry not right now
-    - still dont want to tell
-    - thanks but no thanks
-    - this sucks
-    - very bad
-    - no stop
-    - none of them
-    - I don't agree
-    - how about no
-    - don t have a sense
-    - don't
-    - I don't want that
+    - nope
     - I disagree
     - disagree
     - I don't want
@@ -533,7 +309,6 @@ nlu:
     - no it isn't
     - no I don't
     - I'm not
-    - no that's fine thank you
     - I said no
     - of course not
     - no tanks
@@ -547,33 +322,19 @@ nlu:
     - no I would not
     - let 's not
     - not needed
-    - not this time
-    - no don't do that
-    - no that's wrong
-    - not this
-    - not at this time
     - not exactly
     - no don't
     - not really no
-    - no thank you not right now
     - actually no
-    - no leave it
     - sorry no
     - no incorrect
     - nope sorry
     - I say no
-    - not right now thanks
     - I think no
     - absolutely no
     - no actually
     - apparently not
-    - no do not
     - no just no
-    - no but thank you
-    - no need thanks
-    - no thank you though
-    - no thank you very much
-    - no thanks not right now
     - no forget
 - regex: mobile_number
   examples: |

@@ -26,51 +26,86 @@ stories:
   - intent: get_services_list
   - action: utter_services_list
 
-- story: contact us 
+- story: contact form email
   steps:
   - intent: contact_us
-  - action: utter_contact_us
-  - action: action_deactivate_loop
-  - active_loop: null
+  - action: utter_contact_form
   - action: contact_form
   - active_loop: contact_form
-
-- story: contact us interactive2
-  steps:
-  - intent: smalltalk
-  - action: utter_smalltalk
-  - intent: contact_us
-  - action: utter_contact_us
-  - action: action_deactivate_loop
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: contact_form
-  - active_loop: contact_form
-  - slot_was_set:
-    - requested_slot: name
-  - action: utter_ask_name
-  - intent: inform_name
-    entities:
-    - name: Kiran
-  - slot_was_set:
-    - name: Kiran
   - slot_was_set:
     - requested_slot: contact_details
-  - action: utter_ask_contact_details
   - intent: inform_contact_details
     entities:
-    - mobine_number: '9090542234'
+    - EMAIL_ID: megna454@gmail.com
+  - action: contact_form
   - slot_was_set:
-    - contact_details: '9090542234'
+    - contact_details: megna454@gmail.com
+  - intent: inform_name
+    entities:
+    - NAME: megna
+  - action: contact_form
+  - active_loop: null
   - slot_was_set:
-    - requested_slot: subject
-  - action: utter_ask_subject
+    - name: megna
+  - action: action_contact_confirm
+  
+- story: contact form mobile
+  steps:
+  - intent: contact_us
+  - action: utter_contact_form
+  - action: contact_form
+  - active_loop: contact_form
   - slot_was_set:
-    - subject: 'to discuss regarding android app development'
+    - requested_slot: contact_details
+  - intent: inform_contact_details
+    entities:
+    - MOBILE_NUM: '6747374723'
+  - action: contact_form
+  - slot_was_set:
+    - contact_details: '6747374723'
+  - intent: inform_name
+    entities:
+    - NAME: Rudra
+  - action: contact_form
+  - active_loop: null
+  - slot_was_set:
+    - name: Rudra
+  - action: action_contact_confirm
+
+- story: interactive_story_1
+  steps:
+  - intent: contact_us
+  - action: utter_contact_form
+  - action: contact_form
+  - active_loop: contact_form
+  - slot_was_set:
+    - requested_slot: contact_details
+  - slot_was_set:
+    - contact_details: '878594023'
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: sunny
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
   - action: action_contact_confirm
-  - intent: smalltalk
-  - action: utter_smalltalk
+
+- story: interactive_story_2
+  steps:
+  - intent: contact_us
+  - action: utter_contact_form
+  - action: contact_form
+  - active_loop: contact_form
+  - slot_was_set:
+    - requested_slot: contact_details
+  - slot_was_set:
+    - contact_details: '3322454321'
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: shubham
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_contact_confirm

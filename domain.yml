@@ -1,37 +1,43 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- contact_us
+- contact_us:
+    use_entities: true
 - out_of_scope:
-    is_retrieval_intent: true
+    use_entities: true
 - services:
-    is_retrieval_intent: true
-- inform_contact_details
+    use_entities: true
+- inform_contact_details:
+    use_entities: true
 - smalltalk:
-    is_retrieval_intent: true
+    use_entities: true
 - products:
-    is_retrieval_intent: true
-- inform_name
-- get_services_list
-- affirm
-- deny
-- get_products_list
-- nlu_fallback
+    use_entities: true
+- inform_name:
+    use_entities: true
+- get_services_list:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- get_products_list:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities:
-- email_id
-- language
-- mobile_number
-- name
+- EMAIL_ID
+- MOBILE_NUM
+- NAME
 slots:
   name:
     type: text
     influence_conversation: true
   contact_details:
-    type: text
-    influence_conversation: true
-  subject:
     type: text
     influence_conversation: true
   requested_slot:
@@ -446,7 +452,7 @@ responses:
       title: Services
     - payload: Contact you
       title: Contact Us
-    text: How can I help you? 
+    text: How can I help you?
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase? Or try contacting our team?
   utter_default:
@@ -616,7 +622,7 @@ responses:
     text: We know managing an entire hospital can be very overwhelming. We are here with a frictionless solution for you, for managing patients, doctors, inventory, appointments, billing information, finances and much more.
   utter_products/medical_TechMed:
   - text: TechMed- A complete hospital management system [Read More](https://www.techexcel.eu/medical.html)
-  utter_contact_us:
+  utter_contact_form:
   - text: Alright! Let's get connected!😊
   utter_ask_name:
   - text: I would like to know your name.
@@ -628,11 +634,10 @@ responses:
   - text: We need to know your details to reach you back.
 actions:
 - action_contact_confirm
-- action_save_conversation
 - utter_ask_contact_details
 - utter_ask_name
 - utter_ask_subject
-- utter_contact_us
+- utter_contact_form
 - utter_if_deny
 - utter_out_of_scope
 - utter_products
@@ -644,19 +649,14 @@ actions:
 forms:
   contact_form:
     required_slots:
-      name:
-      - entity: name
-        type: from_entity
-      - intent:
-        - inform_name
-        type: from_text
       contact_details:
-      - entity:
-        - email_id
-        - mobile_number
-        type: from_entity
-      - intent:
-        - inform_contact_details
-        type: from_text
-      subject:
-      - type: from_text
+      - type: from_entity
+        entity: EMAIL_ID
+        intent: inform_contact_details
+      - type: from_entity
+        entity: MOBILE_NUM
+        intent: inform_contact_details
+      name:
+      - type: from_entity
+        entity: NAME
+        intent: inform_name

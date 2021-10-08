@@ -8,6 +8,8 @@ pipeline:
 # See https://rasa.com/docs/rasa/tuning-your-model for more information.
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
+  # - name: RegexEntityExtractor
+  #   use_regexes: True
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
@@ -21,6 +23,16 @@ pipeline:
   - name: ResponseSelector
     epochs: 100
     constrain_similarities: true
+  #   retrieval_intent: smalltalk
+  # - name: ResponseSelector
+  #   epochs: 100
+  #   retrieval_intent: services
+  # - name: ResponseSelector
+  #   epochs: 100
+  #   retrieval_intent: products
+  # - name: ResponseSelector
+  #   epochs: 100
+  #   retrieval_intent: out_of_scope
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
@@ -39,4 +51,4 @@ policies:
   - name: RulePolicy
     core_fallback_threshold: 0.4
     core_fallback_action_name: "action_default_fallback"
-    enable_fallback_prediction: True
+    # enable_fallback_prediction: True
